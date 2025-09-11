@@ -1,103 +1,355 @@
+import Container from "@/components/shared/Container";
+import { InteractiveGridPatternDemo } from "@/components/shared/GridContainer";
+import { Button } from "@/components/ui/button";
+import ColorfulCard from "@/components/ui/colorful-card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Text from "@/components/ui/text";
+import {
+    Brain,
+    ChevronRight,
+    Cpu,
+    Laptop,
+    Smartphone,
+    SquareCode,
+    Target,
+} from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { GiTrafficLightsRed } from "react-icons/gi";
+import { IoIosGlobe } from "react-icons/io";
+import { RiUserCommunityLine } from "react-icons/ri";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    return (
+        <div>
+            <Container className="flex relative flex-col space-y-3 justify-center items-center py-20">
+                <InteractiveGridPatternDemo />
+                <Text as="h1" className="text-5xl font-semibold ">
+                    We build. We scale. We grow.
+                </Text>
+                <Text className="text-primary/50">
+                    The perfect team to bring your ideas to life.
+                </Text>
+                <div className="flex justify-center gap-2 items-center flex-wrap text-primary ">
+                    <ColorfulCard variant="sky">
+                        <Smartphone className="text-sky-500" />
+                        App Developers
+                    </ColorfulCard>
+                    <ColorfulCard variant="fuchsia">
+                        <Brain className="text-fuchsia-500" />
+                        AI Agents
+                    </ColorfulCard>
+                    <ColorfulCard variant="orange">
+                        <Laptop className="text-orange-500" />
+                        Web Developers
+                    </ColorfulCard>
+                    <ColorfulCard variant="lime">
+                        <Target className="text-lime-500" />
+                        Digital Marketers
+                    </ColorfulCard>
+                    <ColorfulCard variant="rose">
+                        <SquareCode className="text-rose-500" />
+                        No-Code Experts
+                    </ColorfulCard>
+                </div>
+                <div className="flex justify-between items-center gap-2 mt-5">
+                    <Button variant="default" asChild className="h-10">
+                        <Link href="/">
+                            Start building
+                            <ChevronRight
+                                size={5}
+                                className="bg-secondary rounded-[2px] text-primary"
+                            />
+                        </Link>
+                    </Button>
+                    <Button variant="outline" asChild className="h-10">
+                        <Link href="/">Book a Free Demo</Link>
+                    </Button>
+                </div>
+                <div className=" m-10">
+                    <Image
+                        src="/images/hero-image.png"
+                        alt="Hero Image"
+                        width={1440}
+                        height={600}
+                        className="rounded-lg mx-auto"
+                    />
+                </div>
+                <section className="w-full px-10 ">
+                    <div className="flex flex-col md:flex-row justify-between gap-10">
+                        <div className="max-w-sm text-left ">
+                            <Text
+                                as={"h6"}
+                                className="text-sm font-semibold text-blue-700 text-left "
+                            >
+                                Our Mission
+                            </Text>
+                            <Text
+                                as={"h2"}
+                                className="text-3xl font-bold text-left"
+                            >
+                                Build smarter. Grow faster. Win bigger.
+                            </Text>
+                            <Text className="text-left text-primary/70 text-sm mt-5">
+                                At Kajkarma, we help startups and businesses
+                                launch scalable digital solutions, expand
+                                online, and convert ideas into revenue - with or
+                                without code.
+                            </Text>
+                            <div className="flex flex-col mt-5 gap-2">
+                                <ColorfulCard
+                                    className=" rounded-lg flex flex-col justify-between items-start"
+                                    variant="orange"
+                                >
+                                    <GiTrafficLightsRed
+                                        className="text-primary"
+                                        size={30}
+                                    />
+                                    <Text
+                                        as={"h4"}
+                                        className="text-lg font-medium"
+                                    >
+                                        Turn traffic into action
+                                    </Text>
+                                    <Text className="text-xs text-primary/70 text-left">
+                                        Turn traffic into from landing pages to
+                                        full-scale apps, we build experiences
+                                        that convert users into loyal customers.
+                                    </Text>
+                                </ColorfulCard>
+                                <ColorfulCard
+                                    className=" rounded-lg flex flex-col justify-between items-start"
+                                    variant="sky"
+                                >
+                                    <IoIosGlobe
+                                        className="text-primary"
+                                        size={30}
+                                    />
+                                    <Text
+                                        as={"h4"}
+                                        className="text-lg font-medium"
+                                    >
+                                        Launch anywhere. Sell everywhere
+                                    </Text>
+                                </ColorfulCard>
+                                <ColorfulCard
+                                    className="  rounded-lg flex flex-col justify-between items-start"
+                                    variant="fuchsia"
+                                >
+                                    <RiUserCommunityLine
+                                        className="text-primary"
+                                        size={30}
+                                    />
+                                    <Text
+                                        as={"h4"}
+                                        className="text-lg font-medium"
+                                    >
+                                        Diversify and dominate
+                                    </Text>
+                                </ColorfulCard>
+                                <Button asChild className="w-fit">
+                                    <Link href="/">Start Here</Link>
+                                </Button>
+                            </div>
+                        </div>
+                        <div className="flex justify-center items-end">
+                            <Image
+                                src="/images/mission-image.png"
+                                alt="Mission Image"
+                                width={500}
+                                height={500}
+                                className="rounded-lg mx-auto "
+                            />
+                        </div>
+                    </div>
+                </section>
+            </Container>
+            <section className="bg-slate-50 dark:bg-black/30 w-full flex flex-col justify-center items-center text-center py-10 px-5 rounded-lg mt-10">
+                <Container>
+                    <Text
+                        as={"h6"}
+                        className="text-sm font-semibold text-blue-700 "
+                    >
+                        Your all-in-one IT service partner.
+                    </Text>
+                    <Text as={"h2"} className="text-3xl font-bold ">
+                        Build, launch, and grow — all under one roof.
+                    </Text>
+                    <Text className=" text-primary/70 text-sm mt-5">
+                        From idea to execution, we handle everything.
+                    </Text>
+                    <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 py-10 w-full max-w-5xl mx-auto">
+                        <div className=" flex-col col-span-1 md:col-span-2 flex justify-between items-start bg-gradient-to-b from-fuchsia-100 via-fuchsia-200 to-slate-50 border-1 rounded-xs border-fuchsia-200">
+                            <Text
+                                as={"h4"}
+                                className="text-sm text-fuchsia-500 font-medium pt-5 pl-2 max-w-40 text-left"
+                            >
+                                Custom Dashboard Development
+                            </Text>
+                            <Image
+                                src="/images/dashboard-image.png"
+                                alt="Custom Dashboard"
+                                width={700}
+                                height={300}
+                                className="rounded-lg"
+                            />
+                        </div>
+                        <div className=" flex-col  flex justify-between items-start bg-gradient-to-b from-orange-100 via-orange-200 to-slate-50 border-1 rounded-xs border-orange-200">
+                            <Text
+                                as={"h4"}
+                                className="text-sm text-orange-500 font-medium pt-5 pl-2 max-w-40 text-left"
+                            >
+                                Grow your brand on Social Media
+                            </Text>
+                            <Image
+                                src="/images/socialmedia-grow-image.png"
+                                alt="Social Media Growth"
+                                width={300}
+                                height={300}
+                                className="rounded-lg"
+                            />
+                        </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+                        <div className=" flex-col  flex justify-between items-start bg-gradient-to-b from-amber-100 via-amber-200 to-slate-50 border-1 rounded-xs border-amber-200">
+                            <Text
+                                as={"h4"}
+                                className="text-sm text-amber-500 font-medium pt-5 pl-2 max-w-40 text-left"
+                            >
+                                Turn visitors into clients
+                            </Text>
+                            <Image
+                                src="/images/customer-client-image.png"
+                                alt="Social Media Growth"
+                                width={300}
+                                height={300}
+                                className="rounded-lg"
+                            />
+                        </div>
+                        <div className=" flex-col col-span-1 md:col-span-2 flex justify-between items-start bg-gradient-to-b from-indigo-100 via-indigo-200 to-slate-50 border-1 rounded-xs border-indigo-200">
+                            <Text
+                                as={"h4"}
+                                className="text-sm text-indigo-500 font-medium pt-5 pl-2 max-w-40 text-left"
+                            >
+                                Build Custom Web aplication
+                            </Text>
+                            <Image
+                                src="/images/custom-webapplication-image.png"
+                                alt="Custom Dashboard"
+                                width={500}
+                                height={300}
+                                className="rounded-lg"
+                            />
+                        </div>
+                    </div>
+                </Container>
+            </section>
+            <Container className="flex flex-col space-y-3 justify-center items-center py-20">
+                <section className="">
+                    <Text
+                        as={"h2"}
+                        className="text-3xl font-bold max-w-md mx-auto"
+                    >
+                        Everything you need to sell, scale, and succeed
+                    </Text>
+                    <Image
+                        src="/images/down-arrows.svg"
+                        alt="Everything You Need"
+                        width={1350}
+                        height={300}
+                        className="rounded-lg md:block hidden px-40"
+                    />
+                    <div className="max-w-xs md:max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4">
+                        <ColorfulCard
+                            className=" aspect-square rounded-lg flex flex-col justify-center items-center m-2"
+                            variant="orange"
+                        >
+                            <Cpu className="bg-orange-200 p-1" size={30} />
+                            <Text as={"h4"} className="text-lg font-medium">
+                                Ai assistant and models
+                            </Text>
+                            <Text className="text-xs text-primary/70 ">
+                                Smart AI solutions to automate tasks, enhance
+                                efficiency, and scale your business operations.
+                            </Text>
+                        </ColorfulCard>
+                        <ColorfulCard
+                            className=" aspect-square rounded-lg flex flex-col justify-center items-center m-2"
+                            variant="fuchsia"
+                        >
+                            <Cpu className="bg-fuchsia-200 p-1" size={30} />
+                            <Text as={"h4"} className="text-lg font-medium">
+                                Complete marketing
+                            </Text>
+                            <Text className="text-xs text-primary/70 ">
+                                End-to-end digital marketing strategies that
+                                drive visibility, engagement, and growth.
+                            </Text>
+                        </ColorfulCard>
+                        <ColorfulCard
+                            className=" aspect-square rounded-lg flex flex-col justify-center items-center m-2"
+                            variant="indigo"
+                        >
+                            <Cpu className="bg-indigo-200 p-1" size={30} />
+                            <Text as={"h4"} className="text-lg font-medium">
+                                Custom CRM , Web and App for Your Business
+                            </Text>
+                            <Text className="text-xs text-primary/70 ">
+                                Tailor-made CRM systems to streamline customer
+                                management and boost sales.
+                            </Text>
+                        </ColorfulCard>
+                        <ColorfulCard
+                            className=" aspect-square rounded-lg flex flex-col justify-center items-center m-2"
+                            variant="sky"
+                        >
+                            <Cpu className="bg-sky-200 p-1" size={30} />
+                            <Text as={"h4"} className="text-lg font-medium">
+                                Building MVPs
+                            </Text>
+                            <Text className="text-xs text-primary/70 ">
+                                Fast and cost-effective development of Minimum
+                                Viable Products to validate your ideas.
+                            </Text>
+                        </ColorfulCard>
+                    </div>
+                </section>
+
+                <section className="my-20">
+                    <Text
+                        as={"h6"}
+                        className="text-sm font-semibold text-blue-700 "
+                    >
+                        Pricing
+                    </Text>
+                    <Text as={"h2"} className="text-3xl font-bold ">
+                        For creators, brands and agencies.
+                    </Text>
+                    <Text className=" text-primary/70 text-sm mt-5">
+                        We offer you different options to make your life easier.
+                    </Text>
+                    <div className="mt-10 flex justify-center items-center ">
+                        <Tabs
+                            defaultValue="package"
+                            className="w-[400px] flex justify-center items-center"
+                        >
+                            <TabsList>
+                                <TabsTrigger value="package">
+                                    Package
+                                </TabsTrigger>
+                                <TabsTrigger value="services">
+                                    Services
+                                </TabsTrigger>
+                            </TabsList>
+                            <TabsContent value="package">
+                                Make changes to your account here.
+                            </TabsContent>
+                            <TabsContent value="services">
+                                Change your password here.
+                            </TabsContent>
+                        </Tabs>
+                    </div>
+                </section>
+            </Container>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    );
 }
