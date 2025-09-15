@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <header className="bg-slate-50 dark:bg-zinc-800 sticky top-0 z-50 ">
             <Container>
-                <div className="flex items-center justify-between py-4">
+                <div className="flex items-center justify-between py-1">
                     <div className="select-none">
                         <Link href="/">
                             <h1 className="font-poppins font-semibold text-xl">

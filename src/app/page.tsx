@@ -1,5 +1,11 @@
 import Container from "@/components/shared/Container";
-import { InteractiveGridPatternDemo } from "@/components/shared/GridContainer";
+import { TextAnimation } from "@/components/shared/TextAnimation";
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import ColorfulCard from "@/components/ui/colorful-card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -23,32 +29,34 @@ export default function Home() {
     return (
         <div>
             <Container className="flex relative flex-col space-y-3 justify-center items-center py-20">
-                <InteractiveGridPatternDemo />
-                <Text as="h1" className="text-5xl font-semibold ">
-                    We build. We scale. We grow.
-                </Text>
-                <Text className="text-primary/50">
-                    The perfect team to bring your ideas to life.
-                </Text>
+                <TextAnimation
+                    className="text-5xl font-semibold"
+                    text="We build. We scale. We grow."
+                />
+
+                <TextAnimation
+                    className="text-primary/70"
+                    text="The perfect team to bring your ideas to life."
+                />
                 <div className="flex justify-center gap-2 items-center flex-wrap text-primary ">
                     <ColorfulCard variant="sky">
-                        <Smartphone className="text-sky-500" />
+                        <Smartphone className="text-sky-500" size={15} />
                         App Developers
                     </ColorfulCard>
                     <ColorfulCard variant="fuchsia">
-                        <Brain className="text-fuchsia-500" />
+                        <Brain className="text-fuchsia-500" size={15} />
                         AI Agents
                     </ColorfulCard>
                     <ColorfulCard variant="orange">
-                        <Laptop className="text-orange-500" />
+                        <Laptop className="text-orange-500" size={15} />
                         Web Developers
                     </ColorfulCard>
                     <ColorfulCard variant="lime">
-                        <Target className="text-lime-500" />
+                        <Target className="text-lime-500" size={15} />
                         Digital Marketers
                     </ColorfulCard>
                     <ColorfulCard variant="rose">
-                        <SquareCode className="text-rose-500" />
+                        <SquareCode className="text-rose-500" size={15} />
                         No-Code Experts
                     </ColorfulCard>
                 </div>
@@ -97,57 +105,101 @@ export default function Home() {
                                 without code.
                             </Text>
                             <div className="flex flex-col mt-5 gap-2">
-                                <ColorfulCard
-                                    className=" rounded-lg flex flex-col justify-between items-start"
-                                    variant="orange"
+                                <Accordion
+                                    type="single"
+                                    collapsible
+                                    className="space-y-2"
+                                    defaultValue="item-1"
                                 >
-                                    <GiTrafficLightsRed
-                                        className="text-primary"
-                                        size={30}
-                                    />
-                                    <Text
-                                        as={"h4"}
-                                        className="text-lg font-medium"
+                                    <AccordionItem
+                                        value="item-1"
+                                        className="bg-orange-50 dark:bg-orange-900/20 px-5 rounded-lg border border-orange-200 dark:border-orange-700"
                                     >
-                                        Turn traffic into action
-                                    </Text>
-                                    <Text className="text-xs text-primary/70 text-left">
-                                        Turn traffic into from landing pages to
-                                        full-scale apps, we build experiences
-                                        that convert users into loyal customers.
-                                    </Text>
-                                </ColorfulCard>
-                                <ColorfulCard
-                                    className=" rounded-lg flex flex-col justify-between items-start"
-                                    variant="sky"
-                                >
-                                    <IoIosGlobe
-                                        className="text-primary"
-                                        size={30}
-                                    />
-                                    <Text
-                                        as={"h4"}
-                                        className="text-lg font-medium"
+                                        <AccordionTrigger className="hover:no-underline text-orange-700 dark:text-orange-300">
+                                            <div className="flex flex-col items-start gap-3">
+                                                <GiTrafficLightsRed
+                                                    className="text-orange-500"
+                                                    size={24}
+                                                />
+                                                <Text
+                                                    as={"h4"}
+                                                    className="text-lg font-medium"
+                                                >
+                                                    Turn traffic into action
+                                                </Text>
+                                            </div>
+                                        </AccordionTrigger>
+                                        <AccordionContent>
+                                            <Text className="text-xs text-orange-700/70 dark:text-orange-300/70 text-left ">
+                                                Turn traffic into from landing
+                                                pages to full-scale apps, we
+                                                build experiences that convert
+                                                users into loyal customers.
+                                            </Text>
+                                        </AccordionContent>
+                                    </AccordionItem>
+
+                                    <AccordionItem
+                                        value="item-2"
+                                        className="bg-sky-50 dark:bg-sky-900/20 px-5 rounded-lg border border-sky-200 dark:border-sky-700"
                                     >
-                                        Launch anywhere. Sell everywhere
-                                    </Text>
-                                </ColorfulCard>
-                                <ColorfulCard
-                                    className="  rounded-lg flex flex-col justify-between items-start"
-                                    variant="fuchsia"
-                                >
-                                    <RiUserCommunityLine
-                                        className="text-primary"
-                                        size={30}
-                                    />
-                                    <Text
-                                        as={"h4"}
-                                        className="text-lg font-medium"
+                                        <AccordionTrigger className="hover:no-underline text-sky-700 dark:text-sky-300">
+                                            <div className="flex flex-col items-start gap-3">
+                                                <IoIosGlobe
+                                                    className="text-sky-500"
+                                                    size={24}
+                                                />
+                                                <Text
+                                                    as={"h4"}
+                                                    className="text-lg font-medium"
+                                                >
+                                                    Launch anywhere. Sell
+                                                    everywhere
+                                                </Text>
+                                            </div>
+                                        </AccordionTrigger>
+                                        <AccordionContent>
+                                            <Text className="text-xs text-sky-700/70 dark:text-sky-300/70 text-left ">
+                                                Deploy your solutions across
+                                                multiple platforms and reach
+                                                customers wherever they are with
+                                                our comprehensive launch
+                                                strategy.
+                                            </Text>
+                                        </AccordionContent>
+                                    </AccordionItem>
+
+                                    <AccordionItem
+                                        value="item-3"
+                                        className="bg-fuchsia-50 dark:bg-fuchsia-900/20 px-5 rounded-lg border border-fuchsia-200 dark:border-fuchsia-700"
                                     >
-                                        Diversify and dominate
-                                    </Text>
-                                </ColorfulCard>
-                                <Button asChild className="w-fit">
+                                        <AccordionTrigger className="hover:no-underline text-fuchsia-700 dark:text-fuchsia-300">
+                                            <div className="flex flex-col items-start gap-3">
+                                                <RiUserCommunityLine
+                                                    className="text-fuchsia-500"
+                                                    size={24}
+                                                />
+                                                <Text
+                                                    as={"h4"}
+                                                    className="text-lg font-medium"
+                                                >
+                                                    Diversify and dominate
+                                                </Text>
+                                            </div>
+                                        </AccordionTrigger>
+                                        <AccordionContent>
+                                            <Text className="text-xs text-fuchsia-700/70 dark:text-fuchsia-300/70 text-left ">
+                                                Expand your market presence and
+                                                establish dominance in your
+                                                industry through strategic
+                                                diversification and growth
+                                                tactics.
+                                            </Text>
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                </Accordion>
+
+                                <Button asChild className="w-fit mt-4">
                                     <Link href="/">Start Here</Link>
                                 </Button>
                             </div>
@@ -332,7 +384,7 @@ export default function Home() {
                             defaultValue="package"
                             className="w-[400px] flex justify-center items-center"
                         >
-                            <TabsList>
+                            <TabsList className=" ">
                                 <TabsTrigger value="package">
                                     Package
                                 </TabsTrigger>
@@ -341,7 +393,20 @@ export default function Home() {
                                 </TabsTrigger>
                             </TabsList>
                             <TabsContent value="package">
-                                Make changes to your account here.
+                                <div className="flex flex-col lg:flex-row justify-between items-center">
+                                    <div>
+                                        <Text
+                                            as="h4"
+                                            className="text-gray-500 "
+                                        >
+                                            We&apos;re a team of builders,
+                                            strategists, and innovators helping
+                                            businesses grow with AI, digital
+                                            marketing, and technology.
+                                        </Text>
+                                    </div>
+                                    <div></div>
+                                </div>
                             </TabsContent>
                             <TabsContent value="services">
                                 Change your password here.
