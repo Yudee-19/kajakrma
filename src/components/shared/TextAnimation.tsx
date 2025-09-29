@@ -46,7 +46,7 @@ export function TextAnimation({
                     key={`${char}-${index}`}
                     variants={charVariants}
                     custom={index}
-                    className="inline-block whitespace-pre"
+                    className="inline-block whitespace-pre flex-nowrap"
                     style={{ willChange: "transform, opacity, filter" }}
                 >
                     {char}
