@@ -93,7 +93,7 @@ const services: Service[] = [
 
 const ServicesContainer = () => {
     return (
-        <section className="my-20 w-full flex flex-col items-center">
+        <section className="mb-16 w-full flex flex-col items-center">
             <AnimatedContainer direction="right" delay={0.2}>
             <Text as={"h6"} className="text-sm font-semibold text-blue-700">
                 Our Services

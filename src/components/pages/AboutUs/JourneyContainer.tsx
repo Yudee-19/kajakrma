@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const JourneyContainer = () => {
     return (
-        <section className="my-20 w-full">
+        <section className="mb-16 w-full">
             <div className="min-h-[60vh] w-full flex items-center justify-center px-4">
                 <AnimatedContainer direction="up" delay={0.2}>
                     <div className="text-center max-w-2xl mx-auto">

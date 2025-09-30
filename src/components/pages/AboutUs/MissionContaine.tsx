@@ -5,7 +5,7 @@ import AnimatedContainer from "@/components/shared/AnimatedContainer";
 
 const MissionContainer = () => {
     return (
-        <section className="my-20 w-full">
+        <section className="mb-10 w-full">
             <div className="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-16">
                 {/* Left Side - Illustration */}
                 <AnimatedContainer 
@@ -13,7 +13,7 @@ const MissionContainer = () => {
                     delay={0.2}
                     className="w-full lg:w-[45%] flex justify-center items-center"
                 >
-                    <div className="relative w-full max-w-2xl aspect-square bg-gradient-to-br rounded-3xl p-6 lg:p-8 flex justify-center items-center">
+                    <div className="relative w-full max-w-2xl aspect-square bg-gradient-to-br rounded-3xl p-2 lg:p-8 flex justify-center items-center">
                         <Image
                             src="/images/missionillustration.png"
                             alt="Growth illustration"
