@@ -62,7 +62,7 @@ const serviceDetailsData: Record<string, ServiceDetailData> = {
         title: "Web Development & Platforms",
         subtitle: "Build powerful, scalable digital solutions",
         description:
-            "Your website is more than just an online presence, it's the foundation of your digital growth. We design and develop platforms that are not only visually engaging but also built with performance, security, and scalability in mind. From dynamic websites to powerful dashboards, CRMs, and full-scale e-commerce systems, we deliver end-to-end solutions that empower your business to attract, convert, and retain customers while staying ahead in a competitive market.",
+            "Your website is more than just an online presence, i&apos;s the foundation of your digital growth. We design and develop platforms that are not only visually engaging but also built with performance, security, and scalability in mind. From dynamic websites to powerful dashboards, CRMs, and full-scale e-commerce systems, we deliver end-to-end solutions that empower your business to attract, convert, and retain customers while staying ahead in a competitive market.",
         icon: <Globe size={24} />,
         variant: "orange",
         iconBgColor: "bg-orange-200",
@@ -91,7 +91,7 @@ const serviceDetailsData: Record<string, ServiceDetailData> = {
             {
                 title: "Optimized for Speed & SEO - Faster, higher, better",
                 description:
-                    "Every platform we build is lightning-fast and SEO-driven. With clean code, mobile-first design, and structured data that makes Google's algorithms love it — while users enjoy engaging.",
+                    "Every platform we build is lightning-fast and SEO-driven. With clean code, mobile-first design, and structured data that makes Google&apos;s algorithms love it — while users enjoy engaging.",
                 bgColor: "bg-sky-50",
                 textColor: "text-sky-900",
             },
@@ -118,9 +118,9 @@ const serviceDetailsData: Record<string, ServiceDetailData> = {
         whyChoose: {
             title: "Why Choose Our Web Development?",
             description:
-                "We don't just build websites — we create complete digital ecosystems that act as the foundation of your growth.",
+                "We don&apos;t just build websites — we create complete digital ecosystems that act as the foundation of your growth.",
             benefits: [
-                "A website or platform today is more than just an online presence. It's your sales engine, your customer support hub, your brand experience, your operations backbone — it's where your customers see how serious you are about your business.",
+                "A website or platform today is more than just an online presence. It&apos;s your sales engine, your customer support hub, your brand experience, your operations backbone — it&apos;s where your customers see how serious you are about your business.",
             ],
         },
         process: [
@@ -149,7 +149,7 @@ const serviceDetailsData: Record<string, ServiceDetailData> = {
         title: "Marketing & Growth Solutions",
         subtitle: "Scale your brand with data-driven strategies",
         description:
-            "In today's digital landscape, visibility is everything. We create comprehensive marketing strategies that drive real results — from social media management to SEO optimization, email campaigns, and content creation. Our data-driven approach ensures every dollar spent delivers measurable ROI while building lasting brand equity.",
+            "In today&apos;s digital landscape, visibility is everything. We create comprehensive marketing strategies that drive real results — from social media management to SEO optimization, email campaigns, and content creation. Our data-driven approach ensures every dollar spent delivers measurable ROI while building lasting brand equity.",
         icon: <TrendingUp size={24} />,
         variant: "fuchsia",
         iconBgColor: "bg-fuchsia-200",
@@ -205,7 +205,7 @@ const serviceDetailsData: Record<string, ServiceDetailData> = {
         whyChoose: {
             title: "Why Choose Our Marketing Services?",
             description:
-                "We don't chase vanity metrics — we focus on growth that matters to your bottom line.",
+                "We don&apos;t chase vanity metrics — we focus on growth that matters to your bottom line.",
             benefits: [
                 "Marketing today requires a perfect blend of creativity and data science. We combine compelling storytelling with advanced analytics to ensure every campaign delivers measurable results and sustainable growth.",
             ],
@@ -294,7 +294,7 @@ const serviceDetailsData: Record<string, ServiceDetailData> = {
             description:
                 "We build automation that works like a skilled team member — reliable, intelligent, and always improving.",
             benefits: [
-                "Automation isn't just about saving time — it's about scaling your business without scaling your team. Our AI solutions handle the repetitive work while maintaining quality and learning from every interaction.",
+                "Automation isn&apos;t just about saving time — it&apos;s about scaling your business without scaling your team. Our AI solutions handle the repetitive work while maintaining quality and learning from every interaction.",
             ],
         },
         process: [
@@ -323,7 +323,7 @@ const serviceDetailsData: Record<string, ServiceDetailData> = {
         title: "MVP & Product Development",
         subtitle: "Launch fast, validate faster",
         description:
-            "Got an idea? Let's build it. We specialize in rapid MVP development that gets your product to market quickly without compromising quality. Using no-code, low-code, and custom development approaches, we help you validate concepts, gather user feedback, and iterate toward product-market fit.",
+            "Got an idea? Let&apos;s build it. We specialize in rapid MVP development that gets your product to market quickly without compromising quality. Using no-code, low-code, and custom development approaches, we help you validate concepts, gather user feedback, and iterate toward product-market fit.",
         icon: <Lightbulb size={24} />,
         variant: "lime",
         iconBgColor: "bg-lime-200",
@@ -380,7 +380,7 @@ const serviceDetailsData: Record<string, ServiceDetailData> = {
             description:
                 "We help you avoid the biggest mistake startups make — building too much before validating.",
             benefits: [
-                "The best MVPs aren't perfect — they're strategic. We help you identify the core features that will validate your hypothesis and attract early adopters, then iterate based on real feedback rather than assumptions.",
+                "The best MVPs aren&apos;t perfect — they&apos;re strategic. We help you identify the core features that will validate your hypothesis and attract early adopters, then iterate based on real feedback rather than assumptions.",
             ],
         },
         process: [
@@ -464,7 +464,7 @@ const serviceDetailsData: Record<string, ServiceDetailData> = {
         whyChoose: {
             title: "Why Choose Our Sales Services?",
             description:
-                "We treat your pipeline like it's our own — because your success is our success.",
+                "We treat your pipeline like it&apos;s our own — because your success is our success.",
             benefits: [
                 "Modern sales is about building relationships, not just sending spam. Our outreach campaigns are personalized, value-driven, and designed to start conversations with the right people at the right time.",
             ],
@@ -581,7 +581,7 @@ const serviceDetailsData: Record<string, ServiceDetailData> = {
         title: "Brand Identity & Design",
         subtitle: "Create a brand that resonates and converts",
         description:
-            "Your brand is more than a logo — it's the emotional connection you build with customers. We create comprehensive brand identities that tell your story, differentiate you from competitors, and create lasting impressions across every touchpoint.",
+            "Your brand is more than a logo — it&apos;s the emotional connection you build with customers. We create comprehensive brand identities that tell your story, differentiate you from competitors, and create lasting impressions across every touchpoint.",
         icon: <Palette size={24} />,
         variant: "orange",
         iconBgColor: "bg-orange-200",
@@ -636,9 +636,9 @@ const serviceDetailsData: Record<string, ServiceDetailData> = {
         whyChoose: {
             title: "Why Choose Our Design Services?",
             description:
-                "We don't just make things look pretty — we create strategic brand assets that drive business results.",
+                "We don&apos;t just make things look pretty — we create strategic brand assets that drive business results.",
             benefits: [
-                "Great design isn't just about aesthetics. It's about creating a cohesive brand experience that builds trust, communicates value, and makes it easy for customers to choose you over competitors.",
+                "Great design isn&apos;t just about aesthetics. It&apos;s about creating a cohesive brand experience that builds trust, communicates value, and makes it easy for customers to choose you over competitors.",
             ],
         },
         process: [
@@ -667,7 +667,7 @@ const serviceDetailsData: Record<string, ServiceDetailData> = {
         title: "Consulting & Strategy",
         subtitle: "Expert guidance to accelerate growth",
         description:
-            "Sometimes you don't need execution — you need direction. Our strategic consulting helps you make better decisions faster. From business model validation to digital transformation roadmaps, we provide the expertise and outside perspective needed to scale intelligently.",
+            "Sometimes you don&apos;t need execution — you need direction. Our strategic consulting helps you make better decisions faster. From business model validation to digital transformation roadmaps, we provide the expertise and outside perspective needed to scale intelligently.",
         icon: <Target size={24} />,
         variant: "fuchsia",
         iconBgColor: "bg-fuchsia-200",
@@ -722,9 +722,9 @@ const serviceDetailsData: Record<string, ServiceDetailData> = {
         whyChoose: {
             title: "Why Choose Our Consulting?",
             description:
-                "We've been in the trenches building and scaling businesses — we know what works and what doesn't.",
+                "We&apos;ve been in the trenches building and scaling businesses — we know what works and what doesn&apos;t.",
             benefits: [
-                "Strategy isn't about planning — it's about making better decisions faster. We bring years of experience across industries and business models to help you avoid costly mistakes and accelerate toward your goals.",
+                "Strategy isn&apos;t about planning — it&apos;s about making better decisions faster. We bring years of experience across industries and business models to help you avoid costly mistakes and accelerate toward your goals.",
             ],
         },
         process: [
@@ -896,7 +896,7 @@ export default function ServiceDetailPage({ params }: PageProps) {
                             Ready to get started?
                         </Text>
                         <Text className="text-primary/70 mb-6 max-w-2xl mx-auto">
-                            Let's discuss your project and create a custom solution that
+                            Let&apos;s discuss your project and create a custom solution that
                             drives real results for your business.
                         </Text>
                         <div className="flex flex-wrap gap-4 justify-center">
@@ -915,4 +915,9 @@ export default function ServiceDetailPage({ params }: PageProps) {
             </Container>
         </div>
     );
+}
+export function generateStaticParams() {
+    return Object.keys(serviceDetailsData).map((slug) => ({
+        slug: slug,
+    }));
 }
