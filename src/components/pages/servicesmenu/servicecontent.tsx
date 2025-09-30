@@ -1,3 +1,4 @@
+//components/servicemenu/servicecontent.tsx
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Text from "@/components/ui/text";
@@ -15,6 +16,7 @@ import {
     Target,
     ChevronRight,
 } from "lucide-react";
+import Link from "next/link";
 
 interface ServiceCategory {
     title: string;
@@ -40,7 +42,7 @@ const serviceCategories: ServiceCategory[] = [
             "membership portals.",
         ],
         buttonText: "Build My Website",
-        buttonLink: "/",
+        buttonLink: "/services/web-app-development",
         icon: <Globe size={20} />,
         variant: "orange",
         bgColor: "bg-orange-50",
@@ -57,7 +59,7 @@ const serviceCategories: ServiceCategory[] = [
             "brand strategy",
         ],
         buttonText: "Boost My Growth",
-        buttonLink: "/",
+        buttonLink: "/services/marketing-growth",
         icon: <TrendingUp size={20} />,
         variant: "fuchsia",
         bgColor: "bg-fuchsia-50",
@@ -74,7 +76,7 @@ const serviceCategories: ServiceCategory[] = [
             "AI Agents",
         ],
         buttonText: "Automate My Workflow",
-        buttonLink: "/",
+        buttonLink: "/services/automation-ai",
         icon: <Cpu size={20} />,
         variant: "sky",
         bgColor: "bg-sky-50",
@@ -90,7 +92,7 @@ const serviceCategories: ServiceCategory[] = [
             "product strategy",
         ],
         buttonText: "Launch My Product",
-        buttonLink: "/",
+        buttonLink: "/services/mvp-product",
         icon: <Lightbulb size={20} />,
         variant: "lime",
         bgColor: "bg-lime-50",
@@ -100,28 +102,29 @@ const serviceCategories: ServiceCategory[] = [
         title: "Sales & Outreach Services",
         description: "",
         features: [
-            "Visual identity",
-            "UI/UX design",
-            "brand positioning for a consistent digital presence",
+            "Cold email campaigns",
+            "LinkedIn outreach",
+            "appointment setting",
+            "lead nurturing",
         ],
-        buttonText: "Get more clients",
-        buttonLink: "/",
+        buttonText: "Get More Clients",
+        buttonLink: "/services/sales-outreach",
         icon: <BarChart3 size={20} />,
         variant: "indigo",
         bgColor: "bg-indigo-50",
         iconBgColor: "bg-indigo-200",
     },
     {
-        title: "Hire team of developers",
+        title: "Hire Team of Developers",
         description: "",
         features: [
-            "Compelling web copy",
-            "blogs",
-            "campaigns",
-            "storytelling to engage audiences",
+            "Dedicated developers",
+            "specialized skills",
+            "flexible engagement",
+            "quality assurance",
         ],
-        buttonText: "Create My Content",
-        buttonLink: "/",
+        buttonText: "Hire Developers",
+        buttonLink: "/services/team-hire",
         icon: <Users size={20} />,
         variant: "sky",
         bgColor: "bg-sky-50",
@@ -131,12 +134,13 @@ const serviceCategories: ServiceCategory[] = [
         title: "Brand Identity & Design",
         description: "",
         features: [
-            "Performance tracking",
-            "data dashboards",
-            "insights to guide growth decisions",
+            "Visual identity",
+            "UI/UX design",
+            "brand positioning",
+            "consistent digital presence",
         ],
-        buttonText: "Analyze My Data",
-        buttonLink: "/",
+        buttonText: "Build My Brand",
+        buttonLink: "/services/brand-design",
         icon: <Palette size={20} />,
         variant: "orange",
         bgColor: "bg-orange-50",
@@ -146,12 +150,13 @@ const serviceCategories: ServiceCategory[] = [
         title: "Consulting & Strategy",
         description: "",
         features: [
-            "Business",
-            "product",
-            "digital strategy tailored to accelerate scaling",
+            "Business strategy",
+            "product strategy",
+            "digital transformation",
+            "tailored to accelerate scaling",
         ],
         buttonText: "Plan My Strategy",
-        buttonLink: "/",
+        buttonLink: "/services/consulting-strategy",
         icon: <Target size={20} />,
         variant: "fuchsia",
         bgColor: "bg-fuchsia-50",
@@ -221,13 +226,13 @@ const ServiceContent = () => {
                                     asChild
                                     className="w-full mt-4 h-10 bg-primary text-background hover:bg-primary/90"
                                 >
-                                    <a
+                                    <Link
                                         href={service.buttonLink}
                                         className="flex items-center justify-center gap-1"
                                     >
                                         {service.buttonText}
                                         <ChevronRight size={16} />
-                                    </a>
+                                    </Link>
                                 </Button>
                             </ColorfulCard>
                         </AnimatedContainer>
