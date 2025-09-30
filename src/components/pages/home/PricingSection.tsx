@@ -12,9 +12,7 @@ import {
     TrendingUp,
     Zap,
 } from "lucide-react";
-import { desc, sub } from "motion/react-client";
 import Link from "next/link";
-import { title } from "process";
 import React from "react";
 import {
     Accordion,

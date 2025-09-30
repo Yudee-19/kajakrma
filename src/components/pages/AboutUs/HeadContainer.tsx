@@ -27,7 +27,7 @@ const HeadContainer = () => {
                         </div>
 
                         <Text className="text-gray-600 text-base lg:text-lg leading-relaxed text-left">
-                            We're a team of builders, strategists, and innovators helping
+                            We&apos;re a team of builders, strategists, and innovators helping
                             businesses grow with AI, digital marketing, and technology.
                         </Text>
 

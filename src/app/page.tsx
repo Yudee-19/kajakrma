@@ -3,7 +3,6 @@ import HeroSection from "@/components/pages/home/HeroSection";
 import PricingSection from "@/components/pages/home/PricingSection";
 import AnimatedContainer from "@/components/shared/AnimatedContainer";
 import Container from "@/components/shared/Container";
-import { TextAnimation } from "@/components/shared/TextAnimation";
 import {
     Accordion,
     AccordionContent,
@@ -14,13 +13,7 @@ import { Button } from "@/components/ui/button";
 import ColorfulCard from "@/components/ui/colorful-card";
 import Text from "@/components/ui/text";
 import {
-    Brain,
-    ChevronRight,
-    Cpu,
-    Laptop,
-    Smartphone,
-    SquareCode,
-    Target,
+    Cpu
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

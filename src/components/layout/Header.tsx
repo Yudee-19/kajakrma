@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../shared/Container";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { ArrowDown, ArrowDownAZ, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { ModeToggle } from "../theme-toggle";
 
 const Header = () => {

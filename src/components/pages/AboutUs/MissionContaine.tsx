@@ -39,7 +39,7 @@ const MissionContainer = () => {
                                 Our mission: Growth made simple
                             </Text>
                             <Text className="text-gray-600 text-sm lg:text-base leading-relaxed">
-                                We believe every idea deserves the right tools to grow. That's why
+                                We believe every idea deserves the right tools to grow. That&apos;s why
                                 we combine AI, strategy, and technology to help businesses scale
                                 faster, smarter, and stronger.
                             </Text>

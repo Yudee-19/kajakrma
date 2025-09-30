@@ -16,7 +16,7 @@ const JourneyContainer = () => {
                         </Text>
                         
                         <Text className="text-gray-600 text-base lg:text-lg mb-8 leading-relaxed">
-                            We're always looking for passionate creators, marketers,
+                            We&apos;re always looking for passionate creators, marketers,
                             and developers to grow with us.
                         </Text>
                         

@@ -1,10 +1,11 @@
 import React from "react";
 import * as Motion from "motion/react-client";
 import { cn } from "@/lib/utils";
+import type { Transition } from "framer-motion";
 
 const getAnimationProperties = (direction: string, distance: number) => {
-    let initial = {};
-    let animate = {};
+    let initial: Record<string, number> = {};
+    let animate: Record<string, number> = {};
 
     switch (direction) {
         case "left":
@@ -52,7 +53,7 @@ const AnimatedContainer = ({
 }) => {
     const [initial, animate] = getAnimationProperties(direction, distance);
 
-    const transition = {
+    const transition: Transition = {
         duration,
         delay,
         ease: "easeOut",
@@ -62,10 +63,9 @@ const AnimatedContainer = ({
         <Motion.div
             className={cn("w-full", className)}
             initial={initial}
-            // animate={animate}
-            transition={transition as any}
+            transition={transition}
             whileInView={animate}
-            viewport={{ once: true }}
+            viewport={{ once }}
             {...rest}
         >
             {children}

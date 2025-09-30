@@ -24,7 +24,7 @@ export function TextAnimation({
             y: 20,
             filter: "blur(10px)",
         },
-        visible: (i: number) => ({
+        visible: () => ({
             opacity: 1,
             y: 0,
             transition: {
