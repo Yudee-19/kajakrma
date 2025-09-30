@@ -1,6 +1,5 @@
 import React from "react";
 import Text from "@/components/ui/text";
-import ColorfulCard from "@/components/ui/colorful-card";
 import Image from "next/image";
 import AnimatedContainer from "@/components/shared/AnimatedContainer";
 
@@ -12,7 +11,7 @@ const MissionContainer = () => {
                 <AnimatedContainer 
                     direction="left" 
                     delay={0.2}
-                    className="w-full lg:w-[45%] flex justify-center items-center lg:mr-8"
+                    className="w-full lg:w-[45%] flex justify-center items-center"
                 >
                     <div className="relative w-full max-w-2xl aspect-square bg-gradient-to-br rounded-3xl p-6 lg:p-8 flex justify-center items-center">
                         <Image
@@ -31,27 +30,23 @@ const MissionContainer = () => {
                     delay={0.3}
                     className="w-full lg:w-[55%]"
                 >
-                    <div className="space-y-6">
-                        <div>
-                            <Text as="h6" className="text-xs font-semibold text-blue-600 mb-2 uppercase tracking-wide">
+                    <div className="space-y-8">
+                        <div className="flex flex-col">
+                            <Text as="h6" className="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-4">
                                 Our mission
                             </Text>
-                            <Text as="h2" className="text-3xl lg:text-4xl font-bold text-gray-900">
+                            <Text as="h2" className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-4">
                                 Our mission: Growth made simple
+                            </Text>
+                            <Text className="text-gray-600 text-sm lg:text-base leading-relaxed">
+                                We believe every idea deserves the right tools to grow. That's why
+                                we combine AI, strategy, and technology to help businesses scale
+                                faster, smarter, and stronger.
                             </Text>
                         </div>
 
-                        <Text className="text-gray-600 text-sm lg:text-base leading-relaxed">
-                            We believe every idea deserves the right tools to grow. That's why
-                            we combine AI, strategy, and technology to help businesses scale
-                            faster, smarter, and stronger.
-                        </Text>
-
-                        <div className="space-y-4 pt-2">
-                            <div 
-                                className="w-full rounded-xl py-3 px-5 flex items-center"
-                                style={{ backgroundColor: '#FFE3FE' }}
-                            >
+                        <div className="space-y-4">
+                            <div className="w-full bg-pink-100 rounded-xl py-3 px-5 flex items-center">
                                 <div className="flex items-center gap-3 w-full">
                                     <Text as="h3" className="text-xl lg:text-2xl font-bold text-gray-900">
                                         5+
@@ -62,10 +57,7 @@ const MissionContainer = () => {
                                 </div>
                             </div>
 
-                            <div 
-                                className="w-full rounded-xl py-3 px-5 flex items-center"
-                                style={{ backgroundColor: '#ECFAFF' }}
-                            >
+                            <div className="w-full bg-cyan-50 rounded-xl py-3 px-5 flex items-center">
                                 <div className="flex items-center gap-3 w-full">
                                     <Text as="h3" className="text-xl lg:text-2xl font-bold text-gray-900">
                                         50+
@@ -76,10 +68,7 @@ const MissionContainer = () => {
                                 </div>
                             </div>
 
-                            <div 
-                                className="w-full rounded-xl py-3 px-5 flex items-center"
-                                style={{ backgroundColor: '#EFFBE8' }}
-                            >
+                            <div className="w-full bg-green-50 rounded-xl py-3 px-5 flex items-center">
                                 <div className="flex items-center gap-3 w-full">
                                     <Text as="h3" className="text-xl lg:text-2xl font-bold text-gray-900">
                                         20+

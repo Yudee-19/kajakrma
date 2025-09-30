@@ -8,10 +8,7 @@ import { ChevronRight } from "lucide-react";
 
 const HeadContainer = () => {
     return (
-        <section 
-            className="my-20 w-full rounded-3xl p-8 lg:p-16"
-            style={{ background: 'linear-gradient(to right, #FFF2DA, #FFDAA4)' }}
-        >
+        <section className="my-20 w-full rounded-3xl p-8 lg:p-16 bg-gradient-to-r from-[#FFF2DA] to-[#FFDAA4] overflow-hidden">
             <div className="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-16">
                 {/* Left Side - Content */}
                 <AnimatedContainer 
@@ -64,23 +61,17 @@ const HeadContainer = () => {
                 <AnimatedContainer 
                     direction="right" 
                     delay={0.3}
-                    className="w-full lg:w-[50%] flex justify-center items-center"
+                    className="w-full lg:w-[50%]"
                 >
-                    <div className="relative w-full max-w-2xl">
+                    <div className="w-full">
                         {/* Main Image Container */}
-                        <div 
-                            className="rounded-3xl p-8 lg:p-12 relative overflow-visible flex items-center justify-center"
-                            style={{ 
-                                backgroundColor: '#FFD08CD9',
-                                minHeight: '400px'
-                            }}
-                        >
+                        <div className="rounded-3xl p-8 lg:p-12 flex items-center justify-center min-h-[400px] bg-[#FFD08CD9]">
                             <Image
                                 src="/images/abouthead.png"
                                 alt="Notifications and updates"
                                 width={600}
                                 height={400}
-                                className="w-full h-auto relative z-10"
+                                className="w-full h-auto"
                             />
                         </div>
                     </div>

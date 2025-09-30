@@ -14,6 +14,7 @@ import {
     ChevronRight,
 } from "lucide-react";
 import Link from "next/link";
+import AnimatedContainer from "@/components/shared/AnimatedContainer";
 
 interface Service {
     icon: React.ReactNode;
@@ -93,27 +94,30 @@ const services: Service[] = [
 const ServicesContainer = () => {
     return (
         <section className="my-20 w-full flex flex-col items-center">
+            <AnimatedContainer direction="right" delay={0.2}>
             <Text as={"h6"} className="text-sm font-semibold text-blue-700">
                 Our Services
             </Text>
             <Text as={"h2"} className="text-3xl font-bold mt-2">
                 Everything you need — under one expert roof.
             </Text>
-            <Text className="text-primary/70 text-sm mt-3 text-center max-w-2xl">
-                We design, develop, and deliver tech solutions that help you build,
-                launch, scale, and automate your digital presence.
-            </Text>
-            <Button asChild className="mt-6 h-10">
-                <Link href="/" className="flex items-center gap-1">
-                    Let's Build
-                    <ChevronRight size={16} />
-                </Link>
-            </Button>
+            <div className="flex flex-col items-center w-full">
+                <Text className="text-primary/70 text-sm mt-3 text-center max-w-2xl">
+                    We design, develop, and deliver tech solutions that help you build,
+                    launch, scale, and automate your digital presence.
+                </Text>
+                <Button asChild className="mt-6 h-10">
+                    <Link href="/" className="flex items-center gap-1">
+                        Let's Build
+                        <ChevronRight size={16} />
+                    </Link>
+                </Button>
+            </div>
 
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full lg:px-20 max-w-7xl">
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full lg:px-20 max-w-7xl mx-auto">
                 {services.map((service) => (
                     <div
-                        className="p-6 rounded-lg bg-white flex flex-col justify-start items-start gap-4"
+                        className="p-6 rounded-lg bg-white flex flex-col justify-start items-center gap-4 text-center"
                         key={service.title}
                     >
                         <div
@@ -125,15 +129,16 @@ const ServicesContainer = () => {
                         >
                             {service.icon}
                         </div>
-                        <Text as="h4" className="text-lg font-semibold text-left">
+                        <Text as="h4" className="text-lg font-semibold">
                             {service.title}
                         </Text>
-                        <Text className="text-sm text-primary/70 text-left">
+                        <Text className="text-sm text-primary/70">
                             {service.description}
                         </Text>
                     </div>
                 ))}
             </div>
+            </AnimatedContainer>
         </section>
     );
 };
