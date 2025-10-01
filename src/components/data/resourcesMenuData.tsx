@@ -1,0 +1,78 @@
+import {
+    BookOpen,
+    Video,
+    FileText,
+    Lightbulb,
+    GraduationCap,
+    MessageSquare,
+    Newspaper,
+    Download,
+} from "lucide-react";
+import { DropdownItem } from "../shared/Dropdown";
+
+export const resourcesMenuData: DropdownItem[] = [
+    {
+        icon: <BookOpen size={20} />,
+        title: "Blog",
+        description: "Read our latest articles.",
+        href: "/resources/blog",
+        iconBg: "bg-blue-100",
+        iconColor: "text-blue-600",
+    },
+    {
+        icon: <Video size={20} />,
+        title: "Video Tutorials",
+        description: "Learn through video guides.",
+        href: "/resources/tutorials",
+        iconBg: "bg-red-100",
+        iconColor: "text-red-600",
+    },
+    {
+        icon: <FileText size={20} />,
+        title: "Case Studies",
+        description: "See our success stories.",
+        href: "/resources/case-studies",
+        iconBg: "bg-green-100",
+        iconColor: "text-green-600",
+    },
+    {
+        icon: <Lightbulb size={20} />,
+        title: "Guides & eBooks",
+        description: "Step-by-step guides.",
+        href: "/resources/guides",
+        iconBg: "bg-yellow-100",
+        iconColor: "text-yellow-600",
+    },
+    {
+        icon: <GraduationCap size={20} />,
+        title: "Webinars",
+        description: "Join live sessions.",
+        href: "/resources/webinars",
+        iconBg: "bg-purple-100",
+        iconColor: "text-purple-600",
+    },
+    {
+        icon: <MessageSquare size={20} />,
+        title: "Community",
+        description: "Connect with others.",
+        href: "/resources/community",
+        iconBg: "bg-pink-100",
+        iconColor: "text-pink-600",
+    },
+    {
+        icon: <Newspaper size={20} />,
+        title: "Newsletter",
+        description: "Get weekly updates.",
+        href: "/resources/newsletter",
+        iconBg: "bg-cyan-100",
+        iconColor: "text-cyan-600",
+    },
+    {
+        icon: <Download size={20} />,
+        title: "Templates",
+        description: "Free downloadable templates.",
+        href: "/resources/templates",
+        iconBg: "bg-orange-100",
+        iconColor: "text-orange-600",
+    },
+];

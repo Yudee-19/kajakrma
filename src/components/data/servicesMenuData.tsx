@@ -1,0 +1,78 @@
+import {
+    Globe,
+    TrendingUp,
+    Cpu,
+    Lightbulb,
+    BarChart3,
+    Users,
+    Palette,
+    Target,
+} from "lucide-react";
+import { DropdownItem } from "../shared/Dropdown";
+
+export const servicesMenuData: DropdownItem[] = [
+    {
+        icon: <Globe size={20} />,
+        title: "Web Development & Platforms",
+        description: "Build powerful, scalable digital solutions.",
+        href: "/services/web-app-development",
+        iconBg: "bg-orange-100",
+        iconColor: "text-orange-600",
+    },
+    {
+        icon: <TrendingUp size={20} />,
+        title: "Marketing & Growth Solutions",
+        description: "Scale your brand with data-driven strategies.",
+        href: "/services/marketing-growth",
+        iconBg: "bg-fuchsia-100",
+        iconColor: "text-fuchsia-600",
+    },
+    {
+        icon: <Cpu size={20} />,
+        title: "Automation & AI Agents",
+        description: "Work smarter with intelligent automation.",
+        href: "/services/automation-ai",
+        iconBg: "bg-sky-100",
+        iconColor: "text-sky-600",
+    },
+    {
+        icon: <Lightbulb size={20} />,
+        title: "MVP & Product Development",
+        description: "Launch fast, validate faster.",
+        href: "/services/mvp-product",
+        iconBg: "bg-lime-100",
+        iconColor: "text-lime-600",
+    },
+    {
+        icon: <BarChart3 size={20} />,
+        title: "Sales & Outreach Services",
+        description: "Fill your pipeline with qualified leads.",
+        href: "/services/sales-outreach",
+        iconBg: "bg-indigo-100",
+        iconColor: "text-indigo-600",
+    },
+    {
+        icon: <Users size={20} />,
+        title: "Hire Team of Developers",
+        description: "Scale your tech team on demand.",
+        href: "/services/team-hire",
+        iconBg: "bg-sky-100",
+        iconColor: "text-sky-600",
+    },
+    {
+        icon: <Palette size={20} />,
+        title: "Brand Identity & Design",
+        description: "Create a brand that resonates and converts.",
+        href: "/services/brand-design",
+        iconBg: "bg-orange-100",
+        iconColor: "text-orange-600",
+    },
+    {
+        icon: <Target size={20} />,
+        title: "Consulting & Strategy",
+        description: "Expert guidance to accelerate growth.",
+        href: "/services/consulting-strategy",
+        iconBg: "bg-fuchsia-100",
+        iconColor: "text-fuchsia-600",
+    },
+];

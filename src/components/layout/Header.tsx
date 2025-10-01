@@ -1,63 +1,72 @@
+// components/Header.tsx
 import React from "react";
 import Container from "../shared/Container";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
-import { ModeToggle } from "../theme-toggle";
+import ServicesDropdown from "../pages/servicesmenu/servicesdropdown";
+import ResourcesDropdown from "../pages/Resource/ResourcesDropdown";
 
 const Header = () => {
     return (
-        <header className="bg-slate-50 dark:bg-zinc-800 sticky top-0 z-50 ">
+        <header className="bg-slate-50 dark:bg-zinc-800 sticky top-0 z-50 border-b border-gray-100 dark:border-zinc-700">
             <Container>
-                <div className="flex items-center justify-between py-1">
+                <div className="flex items-center justify-between py-4">
                     <div className="select-none">
                         <Link href="/">
-                            <h1 className="font-poppins font-semibold text-xl">
+                            <h1 className="font-poppins font-semibold text-xl text-gray-900 dark:text-white">
                                 KAJ KARMA
                             </h1>
                         </Link>
                     </div>
-                    <div className="md:flex items-center justify-between py-4 gap-5 hidden">
-                        <ul className=" list-none flex font-inter text-sm  gap-8">
-                            {/* <li>
-                                <ModeToggle />
-                            </li> */}
+                    <div className="md:flex items-center justify-between gap-5 hidden">
+                        <ul className="list-none flex font-inter text-sm gap-8 items-center">
+                            <li>
+                                <ServicesDropdown />
+                            </li>
+
+                            <li>
+                               <ResourcesDropdown/>
+                            </li>
+
                             <li>
                                 <Link
-                                    href="/services"
-                                    className="flex gap-2 justify-center items-center"
+                                    href="/projects"
+                                    className="hover:text-primary/70 transition-colors"
                                 >
-                                    Services
-                                    <ChevronDown size={15} />
+                                    Our Projects
                                 </Link>
                             </li>
 
                             <li>
                                 <Link
-                                    href="/resources"
-                                    className="flex gap-2 justify-center items-center"
+                                    href="/about"
+                                    className="hover:text-primary/70 transition-colors"
                                 >
-                                    Resources
-                                    <ChevronDown size={15} />
+                                    About us
                                 </Link>
                             </li>
 
                             <li>
-                                <Link href="/projects">Our Projects</Link>
-                            </li>
-                            <li>
-                                <Link href="/about">About us</Link>
-                            </li>
-
-                            <li>
-                                <Link href="/pricing">Pricing</Link>
+                                <Link
+                                    href="/pricing"
+                                    className="hover:text-primary/70 transition-colors"
+                                >
+                                    Pricing
+                                </Link>
                             </li>
 
                             <li>
-                                <Link href="/contact">Contact</Link>
+                                <Link
+                                    href="/contact"
+                                    className="hover:text-primary/70 transition-colors"
+                                >
+                                    Contact
+                                </Link>
                             </li>
                         </ul>
-                        <Button> Start for free</Button>
+                        <Button className="h-10 px-6 rounded-full bg-black hover:bg-gray-800 text-white dark:bg-white dark:text-black dark:hover:bg-gray-100">
+                            Start for free
+                        </Button>
                     </div>
                 </div>
             </Container>
