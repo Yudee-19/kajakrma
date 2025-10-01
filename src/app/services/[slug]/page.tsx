@@ -11,8 +11,8 @@ import AboutServiceSection from "@/components/pages/servicesmenu/AboutServiceSec
 import PricingContainer from "@/components/pages/servicesmenu/PricingContainer";
 import { serviceDetailsData} from "@/components/data/serviceDetailsData";
 import RecentWorks from "@/components/pages/servicesmenu/RecentWorks";
-
 import {servicePricingData} from '@/components/data/servicePricingData'
+import BlogSection from "@/components/pages/servicesmenu/BlogSection";
 
 interface PageProps {
   params: Promise<{ slug: string }>; 
@@ -119,7 +119,11 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           <PricingContainer plans={pricing.plans} tabs={pricing.tabs} />
         )}
 
-        <RecentWorks/>
+        <RecentWorks 
+                serviceSlug={slug} 
+                limit={3} 
+            />
+            <BlogSection limit={3} showCTA={false} />
       </Container>
     </div>
   );

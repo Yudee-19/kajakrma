@@ -5,78 +5,27 @@ import Text from "@/components/ui/text";
 import ColorfulCard from "@/components/ui/colorful-card";
 import AnimatedContainer from "@/components/shared/AnimatedContainer";
 import Container from "@/components/shared/Container";
-import { Rocket, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
+import { getAllWorks, getWorksByService, type WorkProject } from "@/components/data/recentWorksData";
 
-interface WorkProject {
-    title: string;
-    description: string;
-    achievements: string[];
-    buttonText: string;
-    buttonLink: string;
-    icon: React.ReactNode;
-    variant: "sky" | "fuchsia" | "lime" | "orange" | "rose" | "indigo";
-    bgColor: string;
-    iconBgColor: string;
-    imagePlaceholder?: boolean;
+interface RecentWorksProps {
+    serviceSlug?: string;
+    limit?: number;
+    showCTA?: boolean;
 }
 
-const recentWorks: WorkProject[] = [
-    {
-        title: "E-commerce Fashion Store",
-        description:
-            "We partnered with built a Shopify-powered store for a fast-growing fashion brand. With optimized product pages, secure payment gateways, and a seamless checkout flow, the brand saw:",
-        achievements: [
-            "+45% increase in conversions within the first 3 months",
-            "Faster page load times (under 2 seconds)",
-            "Mobile-first experience that drove repeat purchases",
-        ],
-        buttonText: "Visit Website",
-        buttonLink: "#",
-        icon: <Rocket size={20} />,
-        variant: "fuchsia",
-        bgColor: "bg-fuchsia-50",
-        iconBgColor: "bg-fuchsia-200",
-        imagePlaceholder: true,
-    },
-    {
-        title: "CRM Dashboard for Healthcare",
-        description:
-            "A custom CRM system built for a healthcare provider to manage patient data more efficiently. Features included secure data handling, appointment tracking, and analytics dashboards. Results:",
-        achievements: [
-            "Streamlined patient records management",
-            "Reduced admin workload by 35%",
-            "Improved doctor-patient communication",
-        ],
-        buttonText: "Visit Website",
-        buttonLink: "#",
-        icon: <Rocket size={20} />,
-        variant: "sky",
-        bgColor: "bg-sky-50",
-        iconBgColor: "bg-sky-200",
-        imagePlaceholder: true,
-    },
-    {
-        title: "Membership Portal for EdTech Startup",
-        description:
-            "We developed a scalable portal for an education-tech platform, designed to support thousands of users simultaneously. Key features included gamified learning paths, subscription management, and community tools. Achievements:",
-        achievements: [
-            "Onboarded 10,000+ users seamlessly",
-            "Improved engagement through personalized dashboards",
-            "Scalable architecture ready for rapid growth",
-        ],
-        buttonText: "Visit Website",
-        buttonLink: "#",
-        icon: <Rocket size={20} />,
-        variant: "lime",
-        bgColor: "bg-lime-50",
-        iconBgColor: "bg-lime-200",
-        imagePlaceholder: true,
-    },
-];
+const RecentWorks: React.FC<RecentWorksProps> = ({
+    serviceSlug,
+    limit = 3,
+    showCTA = true,
+}) => {
+    const works = serviceSlug 
+        ? getWorksByService(serviceSlug).slice(0, limit)
+        : getAllWorks().slice(0, limit);
 
-const RecentWorks = () => {
+    if (works.length === 0) return null;
+
     return (
         <section className="w-full py-16 md:py-20">
             <Container>
@@ -87,7 +36,7 @@ const RecentWorks = () => {
                             as="h6"
                             className="text-sm font-semibold text-blue-700 mb-2"
                         >
-                            Our Works
+                            {serviceSlug ? "Service" : "Our"} Portfolio
                         </Text>
                         <Text
                             as="h2"
@@ -96,14 +45,16 @@ const RecentWorks = () => {
                             Recent Works
                         </Text>
                         <Text className="text-primary/70 text-sm md:text-base max-w-2xl mx-auto">
-                            Some of our latest web development projects.
+                            {serviceSlug
+                                ? "Real results from real projects in this service category."
+                                : "Some of our latest projects across different services."}
                         </Text>
                     </div>
                 </AnimatedContainer>
 
                 {/* Work Items */}
                 <div className="space-y-8 md:space-y-12">
-                    {recentWorks.map((work, index) => (
+                    {works.map((work, index) => (
                         <AnimatedContainer
                             key={work.title}
                             direction="up"
@@ -190,30 +141,7 @@ const RecentWorks = () => {
                     ))}
                 </div>
 
-                {/* CTA Section */}
-                <AnimatedContainer direction="up" delay={0.6}>
-                    <div className="mt-16 md:mt-20 text-center bg-gradient-to-br from-blue-50 to-indigo-50 p-8 md:p-12 rounded-3xl">
-                        <Text
-                            as="h3"
-                            className="text-2xl md:text-3xl font-bold mb-3"
-                        >
-                            Ready to start your project?
-                        </Text>
-                        <Text className="text-primary/70 text-sm md:text-base mb-6 max-w-2xl mx-auto">
-                            Let&apos;s discuss your vision and create something
-                            amazing together.
-                        </Text>
-                        <Button
-                            asChild
-                            className="h-12 px-8 bg-black hover:bg-gray-800 text-white rounded-full"
-                        >
-                            <Link href="/contact" className="flex items-center gap-2">
-                                Start Your Project
-                                <ExternalLink size={16} />
-                            </Link>
-                        </Button>
-                    </div>
-                </AnimatedContainer>
+                
             </Container>
         </section>
     );
