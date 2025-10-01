@@ -95,11 +95,11 @@ const Dropdown: React.FC<DropdownProps> = ({
                             <Link
                                 key={index}
                                 href={item.href}
-                                className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-zinc-800 transition-colors group"
+                                className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-zinc-800 transition-all duration-200 group cursor-pointer"
                             >
                                 <div
                                     className={cn(
-                                        "flex items-center justify-center w-10 h-10 rounded-lg flex-shrink-0",
+                                        "flex items-center justify-center w-10 h-10 rounded-lg flex-shrink-0 transition-transform duration-200 group-hover:scale-105",
                                         item.iconBg
                                     )}
                                 >
@@ -108,10 +108,10 @@ const Dropdown: React.FC<DropdownProps> = ({
                                     </div>
                                 </div>
                                 <div className="flex-1">
-                                    <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-0.5">
+                                    <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-0.5 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors">
                                         {item.title}
                                     </h4>
-                                    <p className="text-xs text-gray-500 dark:text-gray-400">
+                                    <p className="text-xs text-gray-500 dark:text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">
                                         {item.description}
                                     </p>
                                 </div>
