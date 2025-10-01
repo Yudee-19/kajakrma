@@ -50,11 +50,11 @@ const AboutServiceSection: React.FC<AboutServiceSectionProps> = ({
                             direction="up"
                             delay={0.1 + index * 0.1}
                         >
-                            <div className="bg-white p-5 rounded-2xl border border-gray-200 hover:shadow-md transition-shadow">
-                                <Text as="h4" className="font-semibold mb-2 text-base">
+                            <div className="bg-white p-8 rounded-2xl border border-gray-200 hover:shadow-md transition-shadow">
+                                <Text as="h4" className="font-semibold mb-2 text-base mt-5">
                                     {section.title}
                                 </Text>
-                                <Text className="text-sm text-primary/70 leading-relaxed">
+                                <Text className="text-sm text-primary/70 leading-relaxed mt-2">
                                     {section.description}
                                 </Text>
                             </div>
@@ -63,20 +63,21 @@ const AboutServiceSection: React.FC<AboutServiceSectionProps> = ({
                 </div>
 
                 {/* Right Half - Why Choose + Process Section */}
-                <div className="flex flex-col gap-4">
+             
+                <div className="flex flex-col gap-1">
                     {/* Why Choose */}
                     <AnimatedContainer direction="right" delay={0.3}>
-                        <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-white p-6 rounded-2xl border border-blue-100">
-                            <Text as="h3" className="text-xl font-semibold mb-3">
+                        <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-white p-4 rounded-2xl border border-blue-100">
+                            <Text as="h3" className="text-lg font-semibold mb-3">
                                 {whyChoose.title}
                             </Text>
-                            <Text className="text-sm text-primary/70 mb-4 leading-relaxed">
+                            <Text className="text-sm text-primary/70 mb-3 leading-relaxed">
                                 {whyChoose.description}
                             </Text>
                             <div className="space-y-2">
                                 {whyChoose.benefits.map((benefit, index) => (
-                                    <div key={index} className="flex items-start gap-3">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
+                                    <div key={index} className="flex items-start gap-2">
+                                        <div className="w-1.5 h-1.5   mt-3 flex-shrink-0" />
                                         <Text className="text-sm text-primary/80 leading-relaxed">
                                             {benefit}
                                         </Text>
@@ -92,25 +93,23 @@ const AboutServiceSection: React.FC<AboutServiceSectionProps> = ({
                             Our Process ({process.length} Steps):
                         </Text>
                         
-                        <div className="flex flex-col gap-3">
+                        <div className="flex flex-col gap-1">
                             {process.map((step, index) => (
                                 <ColorfulCard
                                     key={step.step}
                                     variant={step.variant}
-                                    className="p-5 rounded-2xl"
+                                    className="p-4 rounded-2xl"
                                 >
-                                    <div className="flex items-start gap-4">
-                                        <Text className="font-bold text-xl min-w-[2rem]">
+                                    <div className="flex items-center gap-2">
+                                        <Text className="font-bold text-lg">
                                             {step.step}.
                                         </Text>
-                                        <div className="flex-1">
-                                            <Text className="font-semibold text-base mb-1">
-                                                {step.title}
-                                            </Text>
-                                            <Text className="text-sm text-primary/70 leading-relaxed">
-                                                {step.description}
-                                            </Text>
-                                        </div>
+                                        <Text className="font-semibold text-base">
+                                            {step.title}
+                                        </Text>
+                                        <Text className="text-sm text-primary/70">
+                                            {step.description}
+                                        </Text>
                                     </div>
                                 </ColorfulCard>
                             ))}
