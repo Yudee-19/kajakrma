@@ -19,9 +19,9 @@ const Header = () => {
                     </div>
                     <div className="md:flex items-center justify-between py-4 gap-5 hidden">
                         <ul className=" list-none flex font-inter text-sm  gap-8">
-                            <li>
+                            {/* <li>
                                 <ModeToggle />
-                            </li>
+                            </li> */}
                             <li>
                                 <Link
                                     href="/services"

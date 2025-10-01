@@ -9,14 +9,17 @@ import AnimatedContainer from "@/components/shared/AnimatedContainer";
 import Container from "@/components/shared/Container";
 import AboutServiceSection from "@/components/pages/servicesmenu/AboutServiceSection";
 import PricingContainer from "@/components/pages/servicesmenu/PricingContainer";
-import { serviceDetailsData, servicePricingData } from "@/components/data/serviceDetailsData";
+import { serviceDetailsData} from "@/components/data/serviceDetailsData";
+import RecentWorks from "@/components/pages/servicesmenu/RecentWorks";
+
+import {servicePricingData} from '@/components/data/servicePricingData'
 
 interface PageProps {
-  params: Promise<{ slug: string }>; // ✅ mark params as Promise
+  params: Promise<{ slug: string }>; 
 }
 
 export default async function ServiceDetailPage({ params }: PageProps) {
-  const { slug } = await params; // ✅ await params
+  const { slug } = await params; 
   const service = serviceDetailsData[slug];
   const pricing = servicePricingData[slug];
 
@@ -66,8 +69,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         {/* Features */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mb-16 md:mb-20">
           {service.features.map((feature, index) => {
-            const bgColors = ["#FFF0E8", "#FFE3FE", "#E3E9FF", "#ECFAFF"];
-            const backgroundColor = bgColors[index % bgColors.length];
+            const getBgColor = () => {
+              const colors = ["bg-orange-50", "bg-pink-50", "bg-blue-50", "bg-cyan-50"];
+              return colors[index % colors.length];
+            };
 
             const getMarginTop = () => {
               if (index === 0) return "mt-0";
@@ -85,11 +90,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 className={getMarginTop()}
               >
                 <div
-                  style={{ backgroundColor }}
-                  className="p-6 rounded-2xl h-[320px] md:h-[360px] relative overflow-hidden transition-all duration-300 hover:shadow-lg group text-gray-900"
+                  className={`${getBgColor()} p-6 rounded-2xl h-[320px] md:h-[360px] relative overflow-hidden transition-all duration-300 hover:shadow-lg group text-gray-900`}
                 >
                   <div className="relative z-10 h-full flex flex-col items-center justify-center text-center">
-                    <Text as="h3" className="text-sm md:text-base font-bold leading-snug transform -rotate-2 mb-6">
+                    <Text as="h3" className="text-sm md:text-base font-bold leading-snug -rotate-2 mb-6">
                       {feature.title}
                     </Text>
                     <Text className="text-xs opacity-70 leading-relaxed max-w-[90%]">
@@ -114,6 +118,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         {pricing && (
           <PricingContainer plans={pricing.plans} tabs={pricing.tabs} />
         )}
+
+        <RecentWorks/>
       </Container>
     </div>
   );
