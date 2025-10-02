@@ -1,6 +1,6 @@
 //app/services/page.tsx
-import HeadContent from "@/components/pages/servicesmenu/Headercontent";
-import ServiceContent from "@/components/pages/servicesmenu/servicecontent";
+import HeadContent from "@/components/pages/servicesmenu/allServiceHeader";
+import ServiceContent from "@/components/pages/servicesmenu/allServiceCategory";
 const ServicesMenu = () => {
   return (
     <main className="w-full">
