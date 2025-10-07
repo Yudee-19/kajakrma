@@ -21,11 +21,11 @@ const HeroSection = () => {
             <Container className="flex relative flex-col space-y-3 justify-center items-center pb-20">
                 <TextAnimation
                     className="md:text-5xl text-3xl  font-semibold"
-                    text="We build. We scale. We grow."
+                    text="We Strategize. We Innovate. We Excel."
                 />
                 <TextAnimation
                     className="text-primary/70 my-4"
-                    text="The perfect team to bring your ideas to life."
+                    text="Ideas In Action -Your Vision, Our Expertise. Made Real"
                 />
                 <AnimatedContainer direction="up" delay={0.1}>
                     <div className="flex justify-center gap-2 items-center flex-wrap text-primary ">
@@ -68,7 +68,7 @@ const HeroSection = () => {
                 <AnimatedContainer direction="up" delay={0.3}>
                     <div className=" m-10">
                         <Image
-                            src="/images/hero-image.png"
+                            src="/images/das.png"
                             alt="Hero Image"
                             width={1440}
                             height={600}
