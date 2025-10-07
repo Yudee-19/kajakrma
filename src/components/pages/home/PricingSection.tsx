@@ -201,7 +201,7 @@ const PricingSection = () => {
               {/* LEFT SIDE */}
               <div className="w-full lg:w-1/2">
                 <Text as="h4" className="text-gray-500 text-left">
-                  We're a team of builders, strategists, and innovators helping
+                  We&apos;re a team of builders, strategists, and innovators helping
                   businesses grow with AI, marketing, and technology.
                 </Text>
 
@@ -214,17 +214,17 @@ const PricingSection = () => {
                     {
                       key: "web",
                       label: "Web & App Development",
-                      desc: "We build custom websites, apps, and digital platforms that reflect your brand and boost engagement.",
-                    },
+                     desc: "We build powerful, high-performance websites and mobile applications tailored to your brand and business goals. Our team focuses on creating seamless user experiences, responsive interfaces, and scalable solutions that help you attract, engage, and retain customers effectively.",
+    },
                     {
                       key: "marketing",
                       label: "Marketing & Growth Solutions",
-                      desc: "From SEO to paid campaigns — we help you scale faster with data-driven strategies.",
-                    },
+                    desc: "From search engine optimization (SEO) to paid ad campaigns, we craft strategies that accelerate your brand’s growth. Our team analyzes user behavior, optimizes your funnels, and creates compelling content that converts — helping you reach the right audience at the right time.",
+    },
                     {
                       key: "automation",
                       label: "Automation & AI Agents",
-                      desc: "Automate workflows and integrate AI agents to improve efficiency.",
+                      desc: "Automate your business workflows with custom-built AI agents and intelligent automation tools. We design systems that reduce repetitive tasks, improve operational accuracy.",
                     },
                     {
                       key: "mvp",
