@@ -68,7 +68,7 @@ const HeroSection = () => {
                 <AnimatedContainer direction="up" delay={0.3}>
                     <div className=" m-10">
                         <Image
-                            src="/images/das.png"
+                            src="/images/hero-image.png"
                             alt="Hero Image"
                             width={1440}
                             height={600}
