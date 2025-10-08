@@ -104,36 +104,36 @@ export const serviceDetailsData: Record<string, ServiceDetailData> = {
         title: "Marketing & Growth Solutions",
         subtitle: "Scale your brand with data-driven strategies",
         description:
-            "In today&apos;s digital landscape, visibility is everything. We create comprehensive marketing strategies that drive real results — from social media management to SEO optimization, email campaigns, and content creation. Our data-driven approach ensures every dollar spent delivers measurable ROI while building lasting brand equity.",
+           "Your brand's digital presenece is more than just visibility -- it's the engine that drives growth,engagement, and customer loyality.We design implement data-driven marketing strategies across multiple channels to help your business attract, convert, and retain customers while building a strong, memorable brand",
         icon: <TrendingUp size={24} />,
         variant: "fuchsia",
         iconBgColor: "bg-fuchsia-200",
         features: [
             {
-                title: "Social Media Marketing - Build engaged communities",
+                title: "Social Media  - Grow,engage,and connect",
                 description:
-                    "Strategic content creation, community management, and paid campaigns across all major platforms. We craft stories that resonate and convert followers into customers.",
+                   "we craft creative social media stretegies to build your audience, boost engagement, and foster lasting community connections. Every post, campaign,and interaction is designed to amplify your brand voice and generate measurable results.",
                 bgColor: "bg-fuchsia-50",
                 textColor: "text-fuchsia-900",
             },
             {
-                title: "SEO & Content Strategy - Dominate search rankings",
+                title: "SEO  - Rank higher,get discovered",
                 description:
-                    "Comprehensive SEO audits, keyword research, on-page optimization, and content strategies that put you at the top of search results and keep you there.",
+                   "Our SEO stratiegies ensure your website ranks higher in search results, drives organic traffic, and captures relevant leads. From on page optimization to keyword reserch and content strategy, we help your business stay visinle and competitive online",
                 bgColor: "bg-purple-50",
                 textColor: "text-purple-900",
             },
             {
-                title: "Email Campaigns - Convert and retain customers",
+                title: "Email Campaigns - Nature and convert",
                 description:
-                    "Automated email sequences, newsletters, and personalized campaigns that nurture leads and drive repeat business with proven conversion tactics.",
+                 "We create personlized, targeted email campaigns that engage your audience, nurture leads, and drive converions. Automated workflows and data-driven messaging ensure your emails deliver the right message to the right person at the right time.",
                 bgColor: "bg-pink-50",
                 textColor: "text-pink-900",
             },
             {
-                title: "Brand Strategy - Stand out and stay memorable",
+                title: "Brand Strategy - Consistant, memorable, and impactful",
                 description:
-                    "Complete brand positioning, messaging frameworks, and visual identity systems that make your business instantly recognizable and trusted.",
+                  "We help you define and execute a cohensive brand strategy that resonates across all digital touchpoints, From visual identity to messaging and positioning, we ensure your brand stands out and builds trust with your audience.",
                 bgColor: "bg-rose-50",
                 textColor: "text-rose-900",
             },
@@ -158,30 +158,30 @@ export const serviceDetailsData: Record<string, ServiceDetailData> = {
             },
         ],
         whyChoose: {
-            title: "Why Choose Our Marketing Services?",
+            title: "Why Choose Our Marketing & Growth Solutions?",
             description:
-                "We don&apos;t chase vanity metrics — we focus on growth that matters to your bottom line.",
+                "We don't just run campigns -- we create measurable growth systems. Your marketing should attract the right audience, engage them with meaningful content, and convert them into loyal customers. Every strategy we implement is data-driven is data-driven,scalable and results-focused .",
             benefits: [
-                "Marketing today requires a perfect blend of creativity and data science. We combine compelling storytelling with advanced analytics to ensure every campaign delivers measurable results and sustainable growth.",
+                
             ],
         },
         process: [
             {
                 step: 1,
-                title: "Research",
-                description: "Analyze market & competitors.",
+                title: "Plan",
+                description: "Understand your business, audience and growth objectives.",
                 variant: "fuchsia",
             },
             {
                 step: 2,
-                title: "Strategy",
-                description: "Build custom growth plan.",
+                title: "Execute",
+                description: "Run nulti-channel campaigns with precision and creativity.",
                 variant: "sky",
             },
             {
                 step: 3,
-                title: "Execute",
-                description: "Launch & optimize campaigns.",
+                title: "Analyze & Optimize",
+                description: "Measure results, refine strategies, and maximize ROI.",
                 variant: "lime",
             },
         ],
@@ -278,83 +278,83 @@ export const serviceDetailsData: Record<string, ServiceDetailData> = {
         title: "MVP & Product Development",
         subtitle: "Launch fast, validate faster",
         description:
-            "Got an idea? Let&apos;s build it. We specialize in rapid MVP development that gets your product to market quickly without compromising quality. Using no-code, low-code, and custom development approaches, we help you validate concepts, gather user feedback, and iterate toward product-market fit.",
+         "Bringing your product idea to life requires speed, precision, and strategy. At Kajkarma we help startups and businesses validate,build, and scale products efficiently using no-code/low-code solutions, features testing, and scalable architectures. From concept to launch, we deliver end to end product development that empowers your business to test ideas faster, reduce risk,and grow with confidence.",
         icon: <Lightbulb size={24} />,
         variant: "lime",
         iconBgColor: "bg-lime-200",
         features: [
             {
-                title: "No-code/Low-code MVPs - Launch in weeks, not months",
+                title: "No-code/Low-code MVPs - Build Fast, iterate faster",
                 description:
-                    "Rapid prototyping using powerful platforms like Bubble, Webflow, and Airtable. Get a functional product to market quickly while keeping costs low.",
+                    "We create no-code and low-code MVPs that allow you to validate your ideas quickly without heavy investment. Rapid prototyping lets you test assumptions, gather feedback, and refine your product efficiently, all under the guidence of Kajkarma's expert team .",
                 bgColor: "bg-lime-50",
                 textColor: "text-lime-900",
             },
             {
-                title: "Feature Testing - Validate before you scale",
+                title: "Feature Testing - Validate before scaling",
                 description:
-                    "Build, measure, learn. We implement analytics and testing frameworks that help you understand what users want before investing in full development.",
+                    "Our process includes systematic feature testing to ensure your product meets user needs, works flawlessly, and is ready for market adoption. This reduces risk and helps you make data-driven decisions",
                 bgColor: "bg-green-50",
                 textColor: "text-green-900",
             },
             {
-                title: "Scalable Builds - Start small, grow big",
+                title: "Scalable Builds - Grow without limits",
                 description:
-                    "Our MVPs are built with growth in mind. Clean architecture and modular design ensure your product can scale as your user base grows.",
+                   "We design products with scalability in mind, ensuring your MVP can evolve into a fully-featured, robust platform as your user base and business needs grow",
                 bgColor: "bg-emerald-50",
                 textColor: "text-emerald-900",
             },
             {
-                title: "Product Strategy - From idea to market fit",
+                title: "Product Strategy - From idea to execution ",
                 description:
-                    "Strategic guidance on feature prioritization, user research, competitive analysis, and go-to-market planning to maximize your chances of success.",
+                    "We help define product roadmaps, user journeys, and go-to-market strategies, aligning your development with business goals and market demand for maximum impact.",
                 bgColor: "bg-teal-50",
                 textColor: "text-teal-900",
             },
         ],
         aboutSections: [
             {
-                title: "Rapid Prototyping",
-                description: "Working MVPs delivered in 4-8 weeks.",
+                title: "Rapid MVP Developement",
+                description: "We use no-code/low-code platforms to build functional MVPs quickly,allowing early testing and validation",
             },
             {
-                title: "User Testing",
-                description: "Integrated feedback loops and analytics.",
+                title: "Feature Validation & Testing",
+                description: "Through continueous testing, we ensure product reliability, and market readliness.",
             },
             {
-                title: "Iterative Development",
-                description: "Quick pivots based on real user data.",
+                title: "Scalable Product Architecture",
+                description: "Our solutions are built to scale seamlessly as your product and audience grow .",
             },
             {
-                title: "Technical Roadmap",
-                description: "Plan for scaling from MVP to full product.",
+                title: "Stretegic Product Planing",
+                description:"We provide expert guidence on product roadmaps,feature prioritization, and market strategy to set your product up for long-term success."
             },
         ],
         whyChoose: {
-            title: "Why Choose Our MVP Development?",
+            title: "Why Choose Our MVP & Product Development?",
             description:
-                "We help you avoid the biggest mistake startups make — building too much before validating.",
+                "We don't just build products -- at kajkarma, we turn ideas into scalable, market-ready solutions. Every product we develop is designed to validate quickly, perform flawlessly, and grow sustainably,ensuring you achieve faster time-to-market and higher ROI",
             benefits: [
-                "The best MVPs aren&apos;t perfect — they&apos;re strategic. We help you identify the core features that will validate your hypothesis and attract early adopters, then iterate based on real feedback rather than assumptions.",
+               
             ],
         },
         process: [
             {
                 step: 1,
-                title: "Ideate",
-                description: "Define core features & value prop.",
+                title: "Discover-",
+                description: "Understand your idea, target users, and business objectives.",
                 variant: "fuchsia",
             },
             {
                 step: 2,
-                title: "Build",
-                description: "Develop MVP rapidly.",
+                title: "Build-",
+                description: "Develop MVPs, test features, and iterate quickly based ion feedback . ",
                 variant: "sky",
             },
             {
                 step: 3,
-                title: "Test",
-                description: "Launch, measure & iterate.",
+                title: "Launch-",
+                description: "Deploy scalable products ready for real-world use, with a roadmap for future growth .",
                 variant: "lime",
             },
         ],
@@ -364,15 +364,15 @@ export const serviceDetailsData: Record<string, ServiceDetailData> = {
         title: "Sales & Outreach Services",
         subtitle: "Fill your pipeline with qualified leads",
         description:
-            "Stop chasing cold leads. We build systematic outreach campaigns that fill your pipeline with qualified prospects. From cold email sequences to LinkedIn outreach, appointment setting to lead nurturing — we handle the grunt work of sales so you can focus on closing deals.",
+        "Your brand's outreach is more than just messaging -- it's the bridge between your business and your audience. At kajkarma, we design and implement strategic sales and outreach solutions that create aconsistent digital presence,strengthen your brand, and drive measureable results. From visual identity and UI/UX design to brand positioning, we deliver end-to-end services that empower your business to attract, engage,and convert customers effectively .",
         icon: <BarChart3 size={24} />,
         variant: "indigo",
         iconBgColor: "bg-indigo-200",
         features: [
             {
-                title: "Cold Email Campaigns - Reach decision makers directly",
+                title: "Visual Identity - Memorable & cohensive",
                 description:
-                    "Personalized email sequences that get opened, read, and replied to. We handle list building, copywriting, and follow-up automation for maximum response rates.",
+                    "We craft a strong visual identity that communicates your brand's values, resonates with your audience, and builds trust across all channels. Every design element is thoughtfully created to ensure consistency and recogination.",
                 bgColor: "bg-indigo-50",
                 textColor: "text-indigo-900",
             },
