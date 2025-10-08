@@ -8,7 +8,7 @@ import { ChevronRight } from "lucide-react";
 
 const HeadContainer = () => {
     return (
-        <section className="mb-2 w-full rounded-3xl p-8 lg:p-16 bg-gradient-to-r from-[#FFF2DA] to-[#FFDAA4] overflow-hidden">
+        <section className="mb-2 w-full  p-8 lg:p-16 bg-gradient-to-r from-[#FFF2DA] to-[#FFDAA4] overflow-hidden">
             <div className="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-16">
                 {/* Left Side - Content */}
                 <AnimatedContainer 
