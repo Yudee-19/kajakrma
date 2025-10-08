@@ -377,16 +377,16 @@ export const serviceDetailsData: Record<string, ServiceDetailData> = {
                 textColor: "text-indigo-900",
             },
             {
-                title: "LinkedIn Outreach - Network with purpose",
+                title: "UI/UX - Seamless experiences",
                 description:
-                    "Strategic LinkedIn campaigns that build relationships and generate B2B leads. Connection requests, messaging sequences, and profile optimization.",
+                    "Our UI/UX design ensures that your digital interfaces are intuitive, visually engaging, and user-friendly.By combining aesthetics with usability, we enhance enagagement and drive conversions across platforms",
                 bgColor: "bg-blue-50",
                 textColor: "text-blue-900",
             },
             {
-                title: "Appointment Setting - Fill your calendar",
+                title: "Brand Positioning - Stand out, stay consistent",
                 description:
-                    "Professional SDR services that qualify prospects and book meetings with decision makers. We handle objections and ensure high show-up rates.",
+                  "We help define your brand positioning to create a cohensive and compelling digital presence.From messaging to visual storytelling, every touchpoint strengthens your brand and fosters long-term customer loyalty .",
                 bgColor: "bg-violet-50",
                 textColor: "text-violet-900",
             },
@@ -400,47 +400,47 @@ export const serviceDetailsData: Record<string, ServiceDetailData> = {
         ],
         aboutSections: [
             {
-                title: "Outbound Campaigns",
-                description: "Systematic cold outreach across multiple channels.",
+                title: "Strategic Visual Identity",
+                description: "We build consitent brand visuals across web, social, and marketing channels to ensure recognition and trust .",
             },
             {
-                title: "Lead Qualification",
-                description: "Filter and score prospects before handoff.",
+                title: "UI/UX Design",
+                description: "From website interfaces to app layouts, we deliver seamless and engaging user experiences that convert.",
             },
             {
-                title: "CRM Management",
-                description: "Keep your pipeline organized and up-to-date.",
+                title: "Brand Positioning & Messaging",
+                description: "We define and implement strategic positioning and messaging to make your brand stand out in a competitice market",
             },
             {
                 title: "Performance Reporting",
-                description: "Transparent metrics on every campaign.",
+                description: "By combining AI-powered insights with human strategy, we identify high-value leads, craft personalized outreach campaigns, and nurture genuine relationships that drive conversion .",
             },
         ],
         whyChoose: {
             title: "Why Choose Our Sales Services?",
             description:
-                "We treat your pipeline like it&apos;s our own — because your success is our success.",
+               "We don't just design visuals -- at Kajkarma, we create strategic outreach systems that amplify your brand, engage yopur audience and drive real results. Every service is designed to strengthen your digital presenece, build trust, and increase conversions.",
             benefits: [
-                "Modern sales is about building relationships, not just sending spam. Our outreach campaigns are personalized, value-driven, and designed to start conversations with the right people at the right time.",
+               
             ],
         },
         process: [
             {
                 step: 1,
-                title: "Targeting",
-                description: "Build ideal customer profiles.",
+                title: "Discover -",
+                description: "Understand your brand , target audience, and business goals .",
                 variant: "fuchsia",
             },
             {
                 step: 2,
-                title: "Outreach",
-                description: "Launch multi-channel campaigns.",
+                title: "Build -",
+                description: "Design visual identity, UI/UX and brand positiong strategies . ",
                 variant: "sky",
             },
             {
                 step: 3,
-                title: "Convert",
-                description: "Qualify & book appointments.",
+                title: "Launch -",
+                description: "Implement, monitor, and refine your outreach to ensure consistent impact .",
                 variant: "lime",
             },
         ],
