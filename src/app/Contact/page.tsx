@@ -1,12 +1,12 @@
 // File: app/contact/page.tsx
 
 import React from 'react';
-import Header from '@/components/layout/Header'; 
-import Footer from '@/components/layout/Footer'; 
 import Container from '@/components/shared/Container';
 import Text from '@/components/ui/text';
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Rss } from 'lucide-react';
+// Linkedin आइकन को इम्पोर्ट लिस्ट में जोड़ा गया
+import { Phone, MapPin, Facebook, Instagram, Linkedin, Rss } from 'lucide-react'; 
 import { Button } from '@/components/ui/button'; 
+import Image from 'next/image';
 
 // 1. ContactCard Component Props Interface
 interface ContactCardProps {
@@ -22,7 +22,8 @@ const contactInfo = {
   phone: "+1 (555) 123-4567",
   email: "hello@kajkarma.com",
   socials: [
-    { name: "LinkedIn", icon: Linkedin, link: "#" },
+    // LinkedIn के लिए 'Linkedin' आइकन का उपयोग करें
+    { name: "LinkedIn", icon: Linkedin, link: "#" }, 
     { name: "Instagram", icon: Instagram, link: "#" },
     { name: "Facebook", icon: Facebook, link: "#" },
   ]
@@ -46,7 +47,7 @@ const ContactCard: React.FC<ContactCardProps> = ({ icon: Icon, title, content, c
 
 export default function ContactPage() {
   
-  // Contact Details Box के लिए JSX content
+  // Contact Details Box JSX content
   const contactDetailsContent = (
     <>
       <a href={`tel:${contactInfo.phone}`} className="hover:text-blue-700 block">{contactInfo.phone}</a>
@@ -54,7 +55,7 @@ export default function ContactPage() {
     </>
   );
 
-  // Social Media Box के लिए JSX content (संशोधित - justify-center जोड़ा गया)
+  // Social Media Box JSX content (Centered)
   const socialMediaContent = (
     <div className="flex gap-4 mt-1 justify-center w-full"> 
       {contactInfo.socials.map((social) => (
@@ -70,14 +71,8 @@ export default function ContactPage() {
     </div>
   );
   
-  // *** महत्वपूर्ण सुधार ***
-  // Social Media Card के Title और Icon को भी center करने के लिए,
-  // हम ContactCard में text-center class जोड़ेंगे।
-
   return (
     <>
-     
-
       <main>
         
         {/* === SECTION 1: HERO/BANNER === */}
@@ -86,16 +81,16 @@ export default function ContactPage() {
             
             <div className="order-2 lg:order-1">
               <Text as="h6" className="text-sm font-semibold text-blue-700 uppercase tracking-wider mb-2">
-                Let's Talk Business
+                Let&apos;s Talk Business 
               </Text>
               <Text as="h1" className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
                 Accelerate Your Vision with KAJ KARMA.
               </Text>
               <Text className="text-base text-gray-600 mb-8 leading-relaxed max-w-lg">
-                Are you ready to launch a groundbreaking app, refine your digital strategy, or deploy powerful AI agents? Fill out the form below, and we’ll get back to you within 24 hours.
+                Are you ready to launch a groundbreaking app, refine your digital strategy, or deploy powerful AI agents? Fill out the form below, and we&apos;ll get back to you within 24 hours.
               </Text>
               
-              <form className="space-y-4 bg-gray-50 p-4 rounded-xl border border-skyblue-200">
+              <form className="space-y-4 bg-gray-50 p-4 rounded-xl border border-gray-200">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                           <label htmlFor="name" className="block text-sm font-medium text-gray-700">Full Name</label>
@@ -150,11 +145,15 @@ export default function ContactPage() {
               </form>
             </div>
             
+            {/* Image Component */}
             <div className="order-1 lg:order-2 flex justify-center items-center lg:sticky lg:top-20">
-              <img 
-                src="/images/cont.jpg"
+              <Image 
+                src="/images/cont34.jpg"
                 alt="Contact us animation"
-                className="w-full h-auto object-cover  max-h-[500px] lg:max-h-full"
+                width={800} 
+                height={500}
+                className="w-full h-auto object-cover rounded-2xl shadow-xl border border-gray-200 max-h-[500px] lg:max-h-full"
+                priority
               />
             </div>
           </div>
@@ -171,10 +170,10 @@ export default function ContactPage() {
                 </Text>
             </div>
 
-            {/* 3 Contact Boxes Grid - Social Media Box में centering के लिए text-center क्लास पास की गई है */}
+            {/* 3 Contact Boxes Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
               
-              {/* 1. Address Box - Left aligned as it is an address */}
+              {/* 1. Address Box */}
               <ContactCard 
                 icon={MapPin}
                 title="Our Global Office"
@@ -182,7 +181,7 @@ export default function ContactPage() {
                 className="bg-blue-50 hover:bg-blue-100" 
               />
 
-              {/* 2. Contact Details Box - Left aligned as it uses links */}
+              {/* 2. Contact Details Box */}
               <ContactCard 
                 icon={Phone}
                 title="Direct Contact"
@@ -195,7 +194,7 @@ export default function ContactPage() {
                 icon={Rss}
                 title="Social Media"
                 content={socialMediaContent}
-                className="bg-purple-50 hover:bg-purple-100 text-center items-center" // <-- items-center और text-center जोड़ा गया
+                className="bg-purple-50 hover:bg-purple-100 text-center items-center" 
               />
 
             </div>
@@ -203,8 +202,6 @@ export default function ContactPage() {
         </Container>
 
       </main>
-
-      
     </>
   );
 }
