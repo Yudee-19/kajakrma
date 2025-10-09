@@ -3,7 +3,7 @@
 import React from 'react';
 import Container from '@/components/shared/Container';
 import Text from '@/components/ui/text';
-// Linkedin आइकन को इम्पोर्ट लिस्ट में जोड़ा गया
+// सभी आवश्यक Lucide-React आइकनों का सही इम्पोर्ट
 import { Phone, MapPin, Facebook, Instagram, Linkedin, Rss } from 'lucide-react'; 
 import { Button } from '@/components/ui/button'; 
 import Image from 'next/image';
@@ -22,8 +22,7 @@ const contactInfo = {
   phone: "+1 (555) 123-4567",
   email: "hello@kajkarma.com",
   socials: [
-    // LinkedIn के लिए 'Linkedin' आइकन का उपयोग करें
-    { name: "LinkedIn", icon: Linkedin, link: "#" }, 
+    { name: "LinkedIn", icon: Linkedin, link: "#" }, // FIXED: LinkedIn icon used correctly
     { name: "Instagram", icon: Instagram, link: "#" },
     { name: "Facebook", icon: Facebook, link: "#" },
   ]
@@ -148,11 +147,11 @@ export default function ContactPage() {
             {/* Image Component */}
             <div className="order-1 lg:order-2 flex justify-center items-center lg:sticky lg:top-20">
               <Image 
-                src="/images/cont34.jpg"
+                src="/images/cont.jpg"
                 alt="Contact us animation"
                 width={800} 
                 height={500}
-                className="w-full h-auto object-cover rounded-2xl shadow-xl border border-gray-200 max-h-[500px] lg:max-h-full"
+                className="w-full h-auto object-cover rounded-2xl max-h-[500px] lg:max-h-full"
                 priority
               />
             </div>
