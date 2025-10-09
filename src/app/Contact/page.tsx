@@ -89,7 +89,8 @@ export default function ContactPage() {
                 Are you ready to launch a groundbreaking app, refine your digital strategy, or deploy powerful AI agents? Fill out the form below, and we&apos;ll get back to you within 24 hours.
               </Text>
               
-              <form className="space-y-4 bg-gray-50 p-4 rounded-xl border border-gray-200">
+              {/* === FORM: BACKGROUND COLOR CHANGED TO BG-SKY-100 & BORDER TO BORDER-SKY-300 === */}
+              <form className="space-y-4 bg-sky-100 p-4 rounded-xl border border-sky-300">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                           <label htmlFor="name" className="block text-sm font-medium text-gray-700">Full Name</label>
