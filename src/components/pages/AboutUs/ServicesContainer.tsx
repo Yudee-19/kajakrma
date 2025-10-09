@@ -94,50 +94,63 @@ const services: Service[] = [
 const ServicesContainer = () => {
     return (
         <section className="mb-16 w-full flex flex-col items-center">
+            {/* AnimatedContainer को केवल एक ही child element मिलेगा */}
             <AnimatedContainer direction="right" delay={0.2}>
-            <Text as={"h6"} className="text-sm font-semibold text-blue-700">
-                Our Services
-            </Text>
-            <Text as={"h2"} className="text-3xl font-bold mt-2">
-                Everything you need — under one expert roof.
-            </Text>
-            <div className="flex flex-col items-center w-full">
-                <Text className="text-primary/70 text-sm mt-3 text-center max-w-2xl">
-                    We design, develop, and deliver tech solutions that help you build,
-                    launch, scale, and automate your digital presence.
-                </Text>
-                <Button asChild className="mt-6 h-10">
-                    <Link href="/" className="flex items-center gap-1">
-                        Let&apos;s Build
-                        <ChevronRight size={16} />
-                    </Link>
-                </Button>
-            </div>
-
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full lg:px-20 max-w-7xl mx-auto">
-                {services.map((service) => (
-                    <div
-                        className="p-6 rounded-lg bg-white flex flex-col justify-start items-center gap-4 text-center"
-                        key={service.title}
-                    >
-                        <div
-                            className={cn(
-                                "p-2.5 rounded-lg",
-                                service.iconBgColor,
-                                service.iconColor
-                            )}
-                        >
-                            {service.icon}
-                        </div>
-                        <Text as="h4" className="text-lg font-semibold">
-                            {service.title}
+                <div className="w-full">
+                    
+                    {/* 1. Header Section - Center Aligned */}
+                    <div className="flex flex-col items-center w-full max-w-7xl px-4 lg:px-20 mx-auto text-center">
+                        <Text as={"h6"} className="text-sm font-semibold text-blue-700">
+                            Our Services
                         </Text>
-                        <Text className="text-sm text-primary/70">
-                            {service.description}
+                        <Text as={"h2"} className="text-4xl font-extrabold mt-2 leading-tight">
+                            Everything you need — under <br className="hidden md:inline"/> one expert roof.
                         </Text>
+                        
+                        <Text className="text-primary/70 text-base mt-4 max-w-2xl">
+                            We design, develop, and deliver tech solutions that help you build,
+                            launch, scale, and automate your digital presence.
+                        </Text>
+                        <Button asChild className="mt-8 h-12 px-8 bg-black hover:bg-gray-800 text-white rounded-full text-base font-semibold">
+                            <Link href="/" className="flex items-center gap-2">
+                                Let&apos;s Build
+                                <ChevronRight size={18} />
+                            </Link>
+                        </Button>
                     </div>
-                ))}
-            </div>
+
+                    {/* 2. Service Items - Grid Layout, Left Aligned Content */}
+                    <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 lg:gap-x-12 w-full lg:px-20 max-w-7xl mx-auto">
+                        {services.map((service) => (
+                            <div
+                                className="flex flex-col justify-start items-start text-left max-w-sm mx-auto md:mx-0"
+                                key={service.title}
+                            >
+                                {/* Icon and Title */}
+                                <div className="flex items-center gap-3 mb-2">
+                                    <div
+                                        className={cn(
+                                            "p-2.5 rounded-lg",
+                                            service.iconBgColor,
+                                            service.iconColor
+                                        )}
+                                    >
+                                        {service.icon}
+                                    </div>
+                                    <Text as="h4" className="text-lg font-bold">
+                                        {service.title}
+                                    </Text>
+                                </div>
+
+                                {/* Description */}
+                                <Text className="text-sm text-gray-600 leading-relaxed">
+                                    {service.description}
+                                </Text>
+                            </div>
+                        ))}
+                    </div>
+
+                </div>
             </AnimatedContainer>
         </section>
     );

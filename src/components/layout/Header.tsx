@@ -46,18 +46,11 @@ const Header = () => {
                                 </Link>
                             </li>
 
-                            <li>
-                                <Link
-                                    href="/pricing"
-                                    className="hover:text-primary/70 transition-colors"
-                                >
-                                    Pricing
-                                </Link>
-                            </li>
+                           
 
                             <li>
                                 <Link
-                                    href="/contact"
+                                    href="/Contact"
                                     className="hover:text-primary/70 transition-colors"
                                 >
                                     Contact
@@ -65,7 +58,7 @@ const Header = () => {
                             </li>
                         </ul>
                         <Button className="h-10 px-6 rounded-full bg-black hover:bg-gray-800 text-white dark:bg-white dark:text-black dark:hover:bg-gray-100">
-                            Start for free
+                            Lets Talk
                         </Button>
                     </div>
                 </div>

@@ -1,3 +1,5 @@
+// components/ServiceDetailHero.tsx
+
 import React from "react";
 import Link from "next/link";
 import { ChevronLeft, ArrowRight } from "lucide-react";
@@ -12,6 +14,7 @@ interface ServiceDetailHeroProps {
 
 export default function ServiceDetailHero({ title, description }: ServiceDetailHeroProps) {
   return (
+    // Fragment का उपयोग करके मल्टीपल रूट्स को रेंडर करना
     <>
       {/* Back Link */}
       <AnimatedContainer direction="up" delay={0.1}>
@@ -24,8 +27,9 @@ export default function ServiceDetailHero({ title, description }: ServiceDetailH
         </Link>
       </AnimatedContainer>
 
-      {/* Hero Section */}
+      {/* Hero Section - 1 कॉलम छोटे स्क्रीन पर, 2 कॉलम बड़ी स्क्रीन पर */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12 md:mb-16">
+        
         {/* Left: Title */}
         <AnimatedContainer direction="left" delay={0.2}>
           <Text as="h1" className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
