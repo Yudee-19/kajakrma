@@ -3,7 +3,6 @@
 import React from 'react';
 import Container from '@/components/shared/Container';
 import Text from '@/components/ui/text';
-// सभी आवश्यक Lucide-React आइकनों का सही इम्पोर्ट
 import { Phone, MapPin, Facebook, Instagram, Linkedin, Rss } from 'lucide-react'; 
 import { Button } from '@/components/ui/button'; 
 import Image from 'next/image';
@@ -22,7 +21,8 @@ const contactInfo = {
   phone: "+1 (555) 123-4567",
   email: "hello@kajkarma.com",
   socials: [
-    { name: "LinkedIn", icon: Linkedin, link: "#" }, // FIXED: LinkedIn icon used correctly
+    // LinkedIn आइकन का सही उपयोग
+    { name: "LinkedIn", icon: Linkedin, link: "#" }, 
     { name: "Instagram", icon: Instagram, link: "#" },
     { name: "Facebook", icon: Facebook, link: "#" },
   ]
@@ -59,7 +59,7 @@ export default function ContactPage() {
     <div className="flex gap-4 mt-1 justify-center w-full"> 
       {contactInfo.socials.map((social) => (
           <a 
-              key={social.name} 
+              key={social.name} // .map key के लिए social.name का उपयोग
               href={social.link} 
               aria-label={social.name}
               className="text-gray-500 hover:text-blue-600 transition-colors"
@@ -151,7 +151,7 @@ export default function ContactPage() {
                 alt="Contact us animation"
                 width={800} 
                 height={500}
-                className="w-full h-auto object-cover rounded-2xl max-h-[500px] lg:max-h-full"
+                className="w-full h-auto object-cover rounded-2xl shadow-xl border border-gray-200 max-h-[500px] lg:max-h-full"
                 priority
               />
             </div>
