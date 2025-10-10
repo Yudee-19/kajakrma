@@ -152,7 +152,7 @@ export default function ContactPage() {
                 alt="Contact us animation"
                 width={800} 
                 height={500}
-                className="w-full h-auto object-cover rounded-2xl shadow-xl border border-gray-200 max-h-[500px] lg:max-h-full"
+                className="w-full h-auto object-cover max-h-[500px] lg:max-h-full"
                 priority
               />
             </div>
