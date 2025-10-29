@@ -31,7 +31,7 @@ export default function Home() {
         <HeroSection />
 
         {/* Mission Section */}
-        <section className="w-full px-10">
+        <section className="w-full px-0">
           <div className="flex flex-col md:flex-row justify-between gap-10">
             <div className="max-w-sm text-left">
               <AnimatedContainer direction="up" delay={0.3}>
@@ -266,15 +266,8 @@ export default function Home() {
         </Container>
       </section>
 
-
-
-
-
-
-
-
       {/* Features Section */}
-      <Container className="flex flex-col space-y-3 justify-center items-center py-20">
+      {/* <Container className="flex flex-col space-y-3 justify-center items-center py-20">
         <section>
           <Text
             as="h2"
@@ -347,7 +340,7 @@ export default function Home() {
         </section>
 
         <PricingSection />
-      </Container>
+      </Container> */}
     </div>
   );
 }
